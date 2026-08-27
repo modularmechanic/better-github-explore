@@ -80,6 +80,23 @@ while the topics and collections themselves come live from the Explore feed on e
 actually changed, and then dispatches the deploy explicitly — a push made with `GITHUB_TOKEN` starts
 no workflow, so the site would otherwise never pick the new data up.
 
+## Deploying
+
+Landing on `main` does not publish. `.github/workflows/deploy.yml` runs on a **published release**,
+so shipping is a decision rather than a side effect of merging:
+
+```bash
+gh release create v1.0.0 --generate-notes
+```
+
+Every deploy runs the full CI workflow first, then publishes `dist/` to Pages and fetches the live
+URL back to assert the app root is really there — a green deploy serving a blank page is worse than
+a red one, because nobody looks.
+
+Two things still publish without a release, both deliberate. The three-hourly data sync dispatches
+the deploy itself, or a refreshed snapshot would sit on `main` until someone cut a release; and
+`workflow_dispatch` remains the manual escape hatch for republishing.
+
 ### Why these are snapshots and not live
 
 Because a browser cannot read those pages. `github.com` sends no CORS headers, so `fetch` is

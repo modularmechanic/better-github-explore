@@ -1,8 +1,15 @@
 name: Deploy to GitHub Pages
 
+# Publishing is a decision, not a side effect of merging. Landing on main no
+# longer reaches the live site; cutting a release does.
+#
+# workflow_dispatch stays for two reasons: it is how sync-data.yml ships a
+# refreshed snapshot without waiting for the next release (a push made with
+# GITHUB_TOKEN starts no workflow, so it has to ask explicitly), and it is the
+# escape hatch for republishing the current release by hand.
 on:
-  push:
-    branches: [main]
+  release:
+    types: [published]
   workflow_dispatch:
 
 # Least privilege by default; the deploy job widens this for itself.
