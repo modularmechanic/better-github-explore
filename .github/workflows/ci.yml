@@ -1,0 +1,37 @@
+name: CI
+
+# The gate every change goes through. deploy.yml calls it too (workflow_call),
+# so the deployed bundle is the one CI checked, not a second unverified build.
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_call:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run check
+      - run: npm run build
+      # `vite build` exits 0 on outputs Pages cannot serve: an empty shell, or
+      # absolute /assets/ paths that 404 under the /<repo>/ prefix. Both look
+      # like a blank page in production, so assert the shape here instead.
+      - name: Assert the bundle is real and Pages-compatible
+        run: |
+          test -s dist/index.html
+          grep -q './assets/' dist/index.html
+          grep -q 'id="root"' dist/index.html
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist

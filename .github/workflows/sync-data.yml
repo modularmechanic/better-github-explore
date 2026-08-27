@@ -1,0 +1,127 @@
+name: Refresh data snapshots
+
+# /trending, /topics, /collections and /resources/events each carry data no
+# public API exposes — stars gained per period, GitHub's editorial ordering,
+# the events listing — and github.com sends no CORS headers, so the browser
+# cannot read any of them. All four are snapshotted into the repo instead. A
+# daily run keeps them current without anyone remembering to; it commits only
+# when something actually changed.
+#
+# All four scrapes live in ONE workflow rather than one workflow each, and this
+# file replaces the former sync-events.yml. Two scheduled workflows both
+# pushing to main would race — separate concurrency groups do not serialise
+# against each other, so the loser fails on a non-fast-forward — and each would
+# dispatch its own deploy for the same day's data. One job means one commit and
+# one deploy. The cost is coupling: a scraper that breaks fails the run and the
+# other snapshots go stale with it. That is the honest trade — a red run is
+# visible, every tab shows its own capturedAt, and a day-old snapshot is a far
+# smaller problem than a committed empty one.
+on:
+  schedule:
+    # Every three hours. github.com/trending does not move fast — the top row
+    # held for 2.5 hours when measured — but a daily snapshot could be 23 hours
+    # behind the page it mirrors. This is as close to live as a static site can
+    # get: github.com sends no CORS headers, so the browser cannot read the page
+    # itself, and Pages has no server to proxy through.
+    - cron: '17 */3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# A manual dispatch must not race the cron: two runs would push the same
+# snapshot and the loser would fail on a non-fast-forward.
+concurrency:
+  group: sync-data
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    # The trending scrape alone is 78 sequential page loads spaced 400 ms apart
+    # — about a minute. fetchPage sets no timeout, so cap the job rather than
+    # let one hung socket hold a runner for the default six hours.
+    timeout-minutes: 20
+    permissions:
+      contents: write
+      actions: write # `gh workflow run` needs it to dispatch deploy.yml
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      # Each script asserts its own row counts as it scrapes and throws on a
+      # gutted page, which stops the job before anything is committed.
+      - run: npm run sync:events
+      - run: npm run sync:trending
+      - run: npm run sync:pages
+      # What a per-page assert cannot catch: a parser that still returns rows
+      # but has lost the field everything else is keyed on. A snapshot full of
+      # nameless repositories passes every count check and ships a broken tab.
+      # The trending floor is deliberately loose — narrow languages are thin by
+      # nature, so only a collapse across all 39 files is evidence of anything.
+      - name: Reject a gutted snapshot
+        run: |
+          node --input-type=module -e '
+            import { readFileSync } from "node:fs"
+            const read = (p) => JSON.parse(readFileSync(p, "utf8"))
+
+            const { events } = read("src/data/github-events.json")
+            if (!Array.isArray(events) || events.length < 5) {
+              throw new Error(`only ${events?.length ?? 0} events — the page shape probably changed`)
+            }
+            const brokenEvents = events.filter((e) => !e.title || !e.url)
+            if (brokenEvents.length) throw new Error(`${brokenEvents.length} events missing title or url`)
+
+            // read() throws ENOENT for a file the index promises but the run
+            // never wrote, so this doubles as an index/disk consistency check.
+            const index = read("public/data/trending/index.json")
+            let rows = 0
+            for (const since of index.since) {
+              for (const { slug } of index.languages) {
+                const snap = read(`public/data/trending/${since}-${slug}.json`)
+                if (snap.repos.some((r) => !r.fullName)) throw new Error(`${since}-${slug}.json has a nameless repo`)
+                if (snap.developers.some((d) => !d.login)) throw new Error(`${since}-${slug}.json has a loginless developer`)
+                rows += snap.repos.length
+              }
+            }
+            const files = index.since.length * index.languages.length
+            if (rows < 100) throw new Error(`only ${rows} trending repos across ${files} files — the markup probably changed`)
+
+            const topics = read("src/data/topics-page.json")
+            const collections = read("src/data/collections-page.json")
+            if (topics.featured.some((t) => !t.slug)) throw new Error("a featured topic has no slug")
+            if (topics.popular.some((slug) => !slug)) throw new Error("a popular topic has no slug")
+            if (collections.order.some((slug) => !slug)) throw new Error("a collection has no slug")
+            if (!topics.hero.title || !collections.hero.title) throw new Error("a page hero lost its title")
+
+            console.log(
+              `snapshot ok: ${events.length} events, ${rows} trending repos across ${files} files, ` +
+              `${topics.featured.length} featured and ${topics.popular.length} popular topics, ` +
+              `${collections.order.length} collections`,
+            )
+          '
+      - name: Commit and deploy if anything changed
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # `git add` rather than `git commit -- <paths>`: adding a language to
+          # sync-trending.ts writes a file git has never seen, and a pathspec
+          # commit silently skips untracked files.
+          paths="src/data/github-events.json src/data/topics-page.json src/data/collections-page.json public/data/trending"
+          git add -- $paths
+          if git diff --cached --quiet -- $paths; then
+            echo "Every snapshot is unchanged."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: refresh explore data snapshots"
+          git push
+          # A push made with GITHUB_TOKEN starts no workflow, so neither ci.yml
+          # nor deploy.yml would see this commit and the live site would drift
+          # from main. workflow_dispatch is the documented exception, so ask for
+          # the deploy explicitly — it runs ci.yml itself before publishing, so
+          # the snapshot is still checked before it ships.
+          gh workflow run deploy.yml --ref main

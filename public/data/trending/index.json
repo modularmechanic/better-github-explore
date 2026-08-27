@@ -1,0 +1,62 @@
+{
+  "capturedAt": "2026-08-26T19:03:57.759Z",
+  "since": [
+    "daily",
+    "weekly",
+    "monthly"
+  ],
+  "languages": [
+    {
+      "slug": "all",
+      "label": "All languages"
+    },
+    {
+      "slug": "typescript",
+      "label": "TypeScript"
+    },
+    {
+      "slug": "javascript",
+      "label": "JavaScript"
+    },
+    {
+      "slug": "python",
+      "label": "Python"
+    },
+    {
+      "slug": "rust",
+      "label": "Rust"
+    },
+    {
+      "slug": "go",
+      "label": "Go"
+    },
+    {
+      "slug": "java",
+      "label": "Java"
+    },
+    {
+      "slug": "cpp",
+      "label": "C++"
+    },
+    {
+      "slug": "csharp",
+      "label": "C#"
+    },
+    {
+      "slug": "ruby",
+      "label": "Ruby"
+    },
+    {
+      "slug": "php",
+      "label": "PHP"
+    },
+    {
+      "slug": "swift",
+      "label": "Swift"
+    },
+    {
+      "slug": "kotlin",
+      "label": "Kotlin"
+    }
+  ]
+}

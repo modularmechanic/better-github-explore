@@ -1,0 +1,202 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "@fontsource-variable/geist";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+    --color-link: var(--link);
+    --color-on-glow: var(--text-on-glow);
+    --color-border-control: var(--border-control);
+    --font-heading: var(--font-sans);
+    --font-sans: 'Geist Variable', sans-serif;
+    --color-ring: var(--ring);
+    --color-input: var(--input);
+    --color-border: var(--border);
+    --color-destructive: var(--destructive);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-accent: var(--accent);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-muted: var(--muted);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-secondary: var(--secondary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-primary: var(--primary);
+    --color-popover-foreground: var(--popover-foreground);
+    --color-popover: var(--popover);
+    --color-card-foreground: var(--card-foreground);
+    --color-card: var(--card);
+    --color-foreground: var(--foreground);
+    --color-background: var(--background);
+    --radius-sm: calc(var(--radius) * 0.6);
+    --radius-md: calc(var(--radius) * 0.8);
+    --radius-lg: var(--radius);
+    --radius-xl: calc(var(--radius) * 1.4);
+    --radius-2xl: calc(var(--radius) * 1.8);
+    --radius-3xl: calc(var(--radius) * 2.2);
+    --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+    --background: #ffffff;
+    --foreground: #1f2328;
+    --card: #ffffff;
+    --card-foreground: #1f2328;
+    --popover: #ffffff;
+    --popover-foreground: #1f2328;
+    --primary: #1f2328;
+    --link: #0969da;
+    --glow-violet: oklch(0.62 0.20 292);
+    --glow-blue: oklch(0.62 0.18 245);
+    --glow-pink: oklch(0.68 0.19 350);
+    --glow-strength: 26%;
+    --grid-strength: 65%;
+    --primary-foreground: #ffffff;
+    --secondary: #f6f8fa;
+    --secondary-foreground: #1f2328;
+    --muted: #f6f8fa;
+    --muted-foreground: #59636e;
+    --accent: #f6f8fa;
+    --accent-foreground: #1f2328;
+    --destructive: #cf222e;
+    --border: #d1d9e0;
+    --input: #d1d9e0;
+    --border-control: #818b98;
+    --text-on-glow: #3f4650;
+    --ring: #0969da;
+    --radius: 0.625rem;
+}
+
+.dark {
+    --background: #0d1117;
+    --foreground: #e6edf3;
+    --card: #151b23;
+    --card-foreground: #e6edf3;
+    --popover: #151b23;
+    --popover-foreground: #e6edf3;
+    --primary: #e6edf3;
+    --link: #4493f8;
+    --glow-violet: oklch(0.58 0.22 292);
+    --glow-blue: oklch(0.58 0.20 245);
+    --glow-pink: oklch(0.62 0.20 350);
+    --glow-strength: 46%;
+    --grid-strength: 85%;
+    --primary-foreground: #0d1117;
+    --secondary: #212830;
+    --secondary-foreground: #e6edf3;
+    --muted: #212830;
+    --muted-foreground: #9198a1;
+    --accent: #212830;
+    --accent-foreground: #e6edf3;
+    --destructive: #f85149;
+    --border: #3d444d;
+    --input: #3d444d;
+    --border-control: #6e7681;
+    --text-on-glow: #c9d1d9;
+    --ring: #4493f8;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+    }
+  body {
+    @apply bg-background text-foreground;
+    }
+  html {
+    @apply font-sans;
+    /* Belt and braces: no page should ever scroll horizontally on a phone. */
+    overflow-x: hidden;
+    }
+}
+@layer utilities {
+  /*
+   * WCAG 1.4.11: when a border is the only thing identifying a control, it owes
+   * 3:1 against its surface — --border is a decorative hairline at ~1.4:1 and
+   * only ever had to divide content. Applied by slot rather than by editing
+   * ui/*, which `shadcn` regenerates, and kept off --input because shadcn also
+   * spends that token as a control *fill* (bg-input/30, disabled:bg-input/50).
+   */
+  :is([data-slot='input'], [data-slot='select-trigger']):not(:focus-visible):not([aria-invalid='true']) {
+    border-color: var(--border-control);
+  }
+}
+
+@layer components {
+  /*
+   * Kicker: the small all-caps line a newspaper runs above the headline. Tracking
+   * is widened because default spacing is tuned for sentence case, and it stays
+   * muted so it labels the card without competing with the headline under it.
+   */
+  .kicker {
+    @apply text-xs font-medium tracking-[0.14em] text-muted-foreground uppercase;
+  }
+}
+
+/* Rendered README content — compact typography without pulling in a plugin. */
+@layer components {
+  .markdown-body {
+    @apply text-sm leading-relaxed text-muted-foreground;
+  }
+  .markdown-body :is(h1, h2, h3, h4) {
+    @apply mt-5 mb-2 font-semibold text-foreground first:mt-0;
+  }
+  .markdown-body h1 { @apply text-lg; }
+  .markdown-body h2 { @apply text-base; }
+  .markdown-body :is(h3, h4) { @apply text-sm; }
+  .markdown-body p, .markdown-body ul, .markdown-body ol, .markdown-body blockquote { @apply my-2.5; }
+  .markdown-body :is(ul, ol) { @apply space-y-1 pl-5; }
+  .markdown-body ul { @apply list-disc; }
+  .markdown-body ol { @apply list-decimal; }
+  .markdown-body a { @apply text-primary underline underline-offset-2; }
+  .markdown-body strong { @apply font-semibold text-foreground; }
+  .markdown-body code { @apply rounded bg-muted px-1 py-0.5 font-mono text-[0.85em] text-foreground; }
+  .markdown-body pre {
+    @apply my-3 overflow-x-auto rounded-lg border bg-muted/60 p-3 text-xs;
+  }
+  .markdown-body pre code { @apply bg-transparent p-0; }
+  .markdown-body img { @apply my-2 inline-block max-w-full rounded-md; }
+  .markdown-body blockquote { @apply border-l-2 pl-3 italic; }
+  .markdown-body table { @apply my-3 block w-full overflow-x-auto text-xs; }
+  .markdown-body :is(th, td) { @apply border px-2 py-1 text-left; }
+  .markdown-body hr { @apply my-4; }
+}
+
+/*
+ * Backdrop: big neon washes — violet left, blue right, a pink bloom behind the
+ * hero and one more rising from the foot of the page — over Primer's canvas
+ * colour, with a grid that fades out below the fold. Fixed, so scrolling never
+ * repaints it.
+ */
+@layer components {
+  .app-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-color: var(--background);
+    background-image:
+      radial-gradient(70rem 44rem at 6% -6%,
+        color-mix(in oklab, var(--glow-violet) var(--glow-strength), transparent), transparent 68%),
+      radial-gradient(64rem 40rem at 94% -8%,
+        color-mix(in oklab, var(--glow-blue) var(--glow-strength), transparent), transparent 68%),
+      radial-gradient(52rem 30rem at 46% 6%,
+        color-mix(in oklab, var(--glow-pink) calc(var(--glow-strength) * 0.55), transparent), transparent 66%),
+      radial-gradient(90rem 46rem at 50% 104%,
+        color-mix(in oklab, var(--glow-violet) calc(var(--glow-strength) * 0.6), transparent), transparent 72%);
+  }
+
+  .app-backdrop::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(to right, var(--border) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--border) 1px, transparent 1px);
+    background-size: 3.5rem 3.5rem;
+    opacity: var(--grid-strength);
+    -webkit-mask-image: radial-gradient(85% 62% at 50% -6%, #000, transparent 80%);
+    mask-image: radial-gradient(85% 62% at 50% -6%, #000, transparent 80%);
+  }
+}

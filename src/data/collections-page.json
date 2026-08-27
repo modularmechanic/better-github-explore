@@ -1,0 +1,32 @@
+{
+  "capturedAt": "2026-08-26T18:27:39.280Z",
+  "hero": {
+    "title": "Collections",
+    "blurb": "Curated lists and insight into burgeoning industries, topics, and communities."
+  },
+  "order": [
+    "pixel-art-tools",
+    "made-in-brazil",
+    "game-engines",
+    "choosing-projects",
+    "clean-code-linters",
+    "open-journalism",
+    "design-essentials",
+    "music",
+    "government",
+    "devops-tools",
+    "front-end-javascript-frameworks",
+    "github-browser-extensions",
+    "github-pages-examples",
+    "hacking-minecraft",
+    "javascript-game-engines",
+    "learn-to-code",
+    "machine-learning",
+    "made-in-africa",
+    "net-neutrality",
+    "open-data",
+    "open-source-organizations",
+    "policies",
+    "productivity-tools"
+  ]
+}

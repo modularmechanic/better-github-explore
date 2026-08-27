@@ -1,0 +1,64 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Least privilege by default; the deploy job widens this for itself.
+permissions:
+  contents: read
+
+# Never run two deploys at once, but let a queued one finish.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  # Same checks a PR gets — nothing reaches Pages that CI has not verified.
+  ci:
+    uses: ./.github/workflows/ci.yml
+
+  build:
+    needs: ci
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    # Only this job talks to Pages: pages:write to publish, id-token:write for
+    # the deployment's OIDC token.
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      # enablement lets the first run provision Pages itself, instead of
+      # failing until someone flips the setting by hand. It lives here rather
+      # than in build because it needs pages:write and build's output does not
+      # depend on it (vite is configured with a relative base).
+      - uses: actions/configure-pages@v5
+        with:
+          enablement: true
+      - id: deployment
+        uses: actions/deploy-pages@v4
+      # A green deploy that serves a blank page is worse than a red one: nobody
+      # looks. Fetch what Pages actually returns and fail the run if the app
+      # root is missing. It gates nothing downstream — it just makes a broken
+      # publish visible.
+      - name: Alarm if the published page is not the app
+        run: curl -fsS --retry 3 --retry-delay 5 "${{ steps.deployment.outputs.page_url }}" | grep -q 'id="root"'

@@ -1,0 +1,117 @@
+{
+  "capturedAt": "2026-08-26T18:27:39.280Z",
+  "hero": {
+    "title": "Topics",
+    "blurb": "Browse popular topics on GitHub."
+  },
+  "featured": [
+    {
+      "slug": "awesome",
+      "name": "Awesome Lists",
+      "description": "An awesome list is a list of awesome things curated by the community.",
+      "image": "https://explore-feed.github.com/topics/awesome/awesome.png"
+    },
+    {
+      "slug": "chrome",
+      "name": "Chrome",
+      "description": "Chrome is a web browser from the tech company Google.",
+      "image": "https://explore-feed.github.com/topics/chrome/chrome.png"
+    },
+    {
+      "slug": "code-quality",
+      "name": "Code quality",
+      "description": "Automate your code review with style, quality, security, and test‑coverage checks when you need them.",
+      "image": null
+    },
+    {
+      "slug": "compiler",
+      "name": "Compiler",
+      "description": "Compilers are software that translate higher-level programming languages to lower-level languages (e.g. machine code).",
+      "image": null
+    },
+    {
+      "slug": "css",
+      "name": "CSS",
+      "description": "Cascading Style Sheets (CSS) is a language used most often to style and improve upon the appearance of views.",
+      "image": "https://explore-feed.github.com/topics/css/css.png"
+    },
+    {
+      "slug": "database",
+      "name": "Database",
+      "description": "A database is a structured set of data held in a computer, usually a server.",
+      "image": "https://explore-feed.github.com/topics/database/database.png"
+    },
+    {
+      "slug": "frontend",
+      "name": "Front end",
+      "description": "Front end is the programming and layout that people see and interact with.",
+      "image": null
+    },
+    {
+      "slug": "javascript",
+      "name": "JavaScript",
+      "description": "JavaScript (JS) is a lightweight interpreted programming language with first-class functions.",
+      "image": "https://explore-feed.github.com/topics/javascript/javascript.png"
+    },
+    {
+      "slug": "nodejs",
+      "name": "Node.js",
+      "description": "Node.js is a tool for executing JavaScript in a variety of environments.",
+      "image": "https://explore-feed.github.com/topics/nodejs/nodejs.png"
+    },
+    {
+      "slug": "npm",
+      "name": "npm",
+      "description": "npm is a package manager for JavaScript included with Node.js.",
+      "image": "https://explore-feed.github.com/topics/npm/npm.png"
+    },
+    {
+      "slug": "project-management",
+      "name": "Project management",
+      "description": "Project management is about building scope and executing on the project's goals.",
+      "image": null
+    },
+    {
+      "slug": "python",
+      "name": "Python",
+      "description": "Python is a dynamically typed programming language.",
+      "image": "https://explore-feed.github.com/topics/python/python.png"
+    },
+    {
+      "slug": "react",
+      "name": "React",
+      "description": "React is an open source JavaScript library used for designing user interfaces.",
+      "image": "https://explore-feed.github.com/topics/react/react.png"
+    },
+    {
+      "slug": "react-native",
+      "name": "React Native",
+      "description": "React Native is a JavaScript mobile framework developed by Facebook.",
+      "image": "https://explore-feed.github.com/topics/react-native/react-native.png"
+    },
+    {
+      "slug": "scala",
+      "name": "Scala",
+      "description": "Scala is an object-oriented programming language.",
+      "image": "https://explore-feed.github.com/topics/scala/scala.png"
+    },
+    {
+      "slug": "typescript",
+      "name": "TypeScript",
+      "description": "TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.",
+      "image": "https://explore-feed.github.com/topics/typescript/typescript.png"
+    }
+  ],
+  "popular": [
+    "react",
+    "javascript",
+    "python",
+    "typescript",
+    "mcp",
+    "awesome-list",
+    "curated-list",
+    "ai-agents",
+    "fastapi",
+    "llm"
+  ]
+}
