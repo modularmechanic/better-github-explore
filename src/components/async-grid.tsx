@@ -47,14 +47,20 @@ export function AsyncGrid<T>({
   return <div className={gridClass(dense, className)}>{children(state.data)}</div>
 }
 
+/**
+ * `children` is the way out. An empty result that only says "nothing matched"
+ * leaves the reader to guess which of five controls caused it; a caller that
+ * knows the answer can put the fix here as a button.
+ */
 export function Notice({
-  icon: Icon, title, detail,
-}: { icon: typeof AlertCircle; title: string; detail?: string }) {
+  icon: Icon, title, detail, children,
+}: { icon: typeof AlertCircle; title: string; detail?: string; children?: ReactNode }) {
   return (
     <div className="flex flex-col items-center gap-2 py-20 text-center">
       <Icon className="size-6 text-muted-foreground" />
       <p className="font-medium">{title}</p>
       {detail && <p className="max-w-md text-sm text-muted-foreground">{detail}</p>}
+      {children && <div className="mt-2 flex flex-wrap justify-center gap-2">{children}</div>}
     </div>
   )
 }

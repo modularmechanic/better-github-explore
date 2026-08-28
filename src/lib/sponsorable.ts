@@ -5,6 +5,7 @@
  * only the repository search is rationed.
  */
 import { searchRepos } from '@/lib/github-api'
+import { since } from '@/lib/explore-queries'
 import { fetchFunding } from '@/lib/funding'
 import { starVelocity } from '@/lib/format'
 import type { Funding, Repo } from '@/types/github'
@@ -26,10 +27,9 @@ export interface ScanOptions {
 export async function findSponsorable(
   { language = 'any', minStars = '2000', scan = 100 }: ScanOptions = {},
 ): Promise<ScanResult> {
-  const pushedSince = new Date(Date.now() - 60 * 86_400_000).toISOString().slice(0, 10)
   const query = [
     `stars:>=${minStars}`,
-    `pushed:>${pushedSince}`,
+    `pushed:>${since(60)}`,
     language !== 'any' ? `language:"${language}"` : '',
   ].filter(Boolean).join(' ')
 

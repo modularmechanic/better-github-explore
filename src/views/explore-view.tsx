@@ -9,10 +9,14 @@ import { RepoCard } from '@/components/repo-card'
 import { ResourceEventCard } from '@/components/resource-event-card'
 import { SponsorCard } from '@/components/sponsor-card'
 import { TopicCard } from '@/components/topic-card'
+import { ViewerSection } from '@/components/viewer-section'
 import { ViewerTopicsSection } from '@/components/viewer-topics-section'
 import { useAsync } from '@/hooks/use-async'
-import { developersFrom } from '@/lib/developers'
 import { largestIn } from '@/lib/collections'
+import { developersFrom } from '@/lib/developers'
+import { LENSES } from '@/lib/discover-lenses'
+import { DEFAULT_YEAR } from '@/lib/discover-selection'
+import { fetchSelection } from '@/lib/discover-search'
 import type { ChartWindow } from '@/lib/explore-stats'
 import { trendingQuery, upcomingEvents } from '@/lib/explore-queries'
 import { exploreFeed, searchRepos } from '@/lib/github-api'
@@ -117,6 +121,25 @@ export function ExploreView({ search }: { search: string }) {
       >
         {(repos) => repos.map((repo) => <RepoCard key={repo.id} repo={repo} />)}
       </ExploreSection>
+
+      {/* Our own angle, next to GitHub's: the same request the Discover tab
+          makes, so opening that tab from here costs nothing. */}
+      <ViewerSection
+        title={LENSES.gems.label}
+        blurb={LENSES.gems.blurb}
+        seeAll={{ tab: 'discover', label: 'All lenses' }}
+        load={() => fetchSelection({
+          lens: LENSES.gems,
+          year: DEFAULT_YEAR,
+          maintained: false,
+          category: null,
+          topic: null,
+        })}
+        select={(repos) => repos.filter(repoMatches).slice(0, 6)}
+        onError="inline"
+      >
+        {(repos) => repos.map((repo) => <RepoCard key={repo.id} repo={repo} />)}
+      </ViewerSection>
 
       <ExploreSection
         title="Upcoming events"

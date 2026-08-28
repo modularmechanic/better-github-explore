@@ -1,7 +1,7 @@
 // @vitest-environment jsdom
 import { act, renderHook } from '@testing-library/react'
 import { afterEach, describe, expect, it } from 'vitest'
-import { navigate, parseHash, TABS, useHashRoute, visibleTabs } from './use-hash-route'
+import { navigate, parseHash, tabAllowed, TABS, useHashRoute, visibleTabs } from './use-hash-route'
 
 afterEach(() => {
   location.hash = ''
@@ -64,13 +64,13 @@ describe('useHashRoute', () => {
 })
 
 describe('visibleTabs', () => {
-  it('includes you when a token is stored', () => {
+  it('includes the token-only tabs when a token is stored', () => {
     expect(visibleTabs(true)).toEqual([
-      'explore', 'you', 'trending', 'topics', 'collections', 'events', 'sponsors',
+      'explore', 'you', 'trending', 'discover', 'topics', 'collections', 'events', 'sponsors',
     ])
   })
 
-  it('omits you and keeps the rest in order without one', () => {
+  it('omits you and discover, and keeps the rest in order, without one', () => {
     expect(visibleTabs(false)).toEqual([
       'explore', 'trending', 'topics', 'collections', 'events', 'sponsors',
     ])
@@ -78,6 +78,23 @@ describe('visibleTabs', () => {
 
   it('allocates a new array when filtering, so callers cannot mutate the tuple', () => {
     expect(visibleTabs(false)).not.toBe(TABS)
+  })
+})
+
+describe('tabAllowed', () => {
+  it('gates every token-only tab, not just the first one', () => {
+    expect(tabAllowed('you', false)).toBe(false)
+    expect(tabAllowed('discover', false)).toBe(false)
+  })
+
+  it('opens them once a token is stored', () => {
+    expect(tabAllowed('you', true)).toBe(true)
+    expect(tabAllowed('discover', true)).toBe(true)
+  })
+
+  it('leaves the public tabs alone', () => {
+    expect(tabAllowed('trending', false)).toBe(true)
+    expect(tabAllowed('explore', false)).toBe(true)
   })
 })
 

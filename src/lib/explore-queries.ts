@@ -11,7 +11,15 @@ const WINDOW_QUERY: Record<ChartWindow, { days: number; minStars: number }> = {
   month: { days: 30, minStars: 100 },
 }
 
-const since = (days: number) => new Date(Date.now() - days * 86_400_000).toISOString().slice(0, 10)
+/**
+ * A date qualifier N days back, rounded to the day.
+ *
+ * The rounding is what makes a query cacheable: a timestamp would change every
+ * millisecond and miss the cache on every render, where a date holds for a day
+ * and is shared by every visitor.
+ */
+export const since = (days: number) =>
+  new Date(Date.now() - days * 86_400_000).toISOString().slice(0, 10)
 
 /** The `search/repositories` query for a given trending window. */
 export const trendingQuery = (w: ChartWindow) =>

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
-import { Compass, Flame, KeyRound, Moon, Search, Sun } from 'lucide-react'
+import { createPortal } from 'react-dom'
+import { Check, Compass, Flame, KeyRound, Menu as MenuIcon, Moon, Search, Sun } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs'
@@ -14,6 +15,7 @@ const LABELS: Record<Tab, string> = {
   explore: 'Explore',
   you: 'You',
   trending: 'Trending',
+  discover: 'Discover',
   topics: 'Topics',
   collections: 'Collections',
   events: 'Events',
@@ -39,6 +41,81 @@ function RateBadge() {
   )
 }
 
+/**
+ * The tab strip, as a phone navigates.
+ *
+ * Eight tabs will not sit on a 375px screen, and the scrolling strip they used
+ * to share hid everything past Discover behind a swipe with nothing to suggest
+ * it was there. A burger states the current section and puts the whole list one
+ * tap away, which is what the rest of the phone does.
+ *
+ * Plain state rather than a menu library: this is a list of links that closes
+ * when you pick one. The backdrop below is what dismisses it, so there is no
+ * document listener to attach, leak, or fight with the dialog above it.
+ *
+ * That backdrop is portalled to `document.body` rather than rendered in place.
+ * The header carries `backdrop-blur-xl`, and an element with a backdrop-filter
+ * becomes the containing block for `position: fixed` descendants — so `inset-0`
+ * resolved to the 108px header rather than the viewport, and a tap below it
+ * reached the page instead of closing the menu.
+ */
+function TabMenu({ tab, tabs }: { tab: Tab; tabs: readonly Tab[] }) {
+  const [open, setOpen] = useState(false)
+
+  const choose = (name: Tab) => {
+    navigate(name)
+    setOpen(false)
+  }
+
+  return (
+    <div className="relative" onKeyDown={(e) => e.key === 'Escape' && setOpen(false)}>
+      <button
+        type="button"
+        aria-label="Sections"
+        aria-expanded={open}
+        aria-haspopup="menu"
+        onClick={() => setOpen(!open)}
+        className="-ml-1 flex h-9 items-center gap-2 rounded-lg px-2 text-sm font-medium hover:bg-accent"
+      >
+        <MenuIcon className="size-5" />
+        {LABELS[tab]}
+      </button>
+
+      {open && (
+        <>
+          {createPortal(
+            <div
+              data-slot="nav-backdrop"
+              className="fixed inset-0 z-40"
+              aria-hidden
+              onClick={() => setOpen(false)}
+            />,
+            document.body,
+          )}
+          <div
+            role="menu"
+            className="absolute top-full left-0 z-50 mt-2 w-56 rounded-xl bg-popover p-1.5 text-popover-foreground shadow-lg ring-1 ring-foreground/10"
+          >
+            {tabs.map((name) => (
+              <button
+                key={name}
+                type="button"
+                role="menuitem"
+                onClick={() => choose(name)}
+                // h-11 is a thumb target; this list only renders on a phone.
+                className="flex h-11 w-full items-center gap-2.5 rounded-lg px-3 text-sm hover:bg-accent"
+              >
+                <span className="flex-1 text-left">{LABELS[name]}</span>
+                {name === tab && <Check className="size-4 text-primary" />}
+              </button>
+            ))}
+          </div>
+        </>
+      )}
+    </div>
+  )
+}
+
 export function AppHeader({
   tab, search, onSearchChange,
 }: { tab: Tab; search: string; onSearchChange: (value: string) => void }) {
@@ -54,12 +131,19 @@ export function AppHeader({
 
   return (
     <header className="sticky top-0 z-30 border-b bg-background/70 backdrop-blur-xl">
-      <div className="flex w-full flex-wrap items-center gap-4 px-3 py-2.5 sm:px-6">
+      <div className="flex w-full flex-wrap items-center gap-3 px-3 py-2.5 sm:gap-4 sm:px-6">
+        {/* First on a phone, absent on a desktop, where the strip below serves. */}
+        <div className="sm:hidden">
+          <TabMenu tab={tab} tabs={visibleTabs(has)} />
+        </div>
+
         <BackToGitHub />
 
         <a href="#/explore" className="flex shrink-0 items-center gap-2 text-base tracking-tight">
           <Compass className="size-5 text-primary" />
-          <span>
+          {/* The wordmark is the first thing to go: the burger already names
+              the section, which is what a phone actually needs on screen. */}
+          <span className="hidden sm:inline">
             Better GitHub{' '}
             <b className="bg-gradient-to-r from-link to-[#a371f7] bg-clip-text text-transparent">
               Explore
@@ -73,28 +157,29 @@ export function AppHeader({
             value={search}
             onChange={(e) => onSearchChange(e.target.value)}
             placeholder="Filter what's on screen…"
-            className="h-8 pl-8"
+            className="h-10 pl-8 sm:h-8"
           />
         </div>
 
         <div className="ml-auto flex items-center gap-1.5 sm:ml-0">
           <RateBadge />
-          <Button variant="ghost" size="icon" className="size-8" onClick={() => setTokenOpen(true)} title="API token">
+          <Button variant="ghost" size="icon" className="size-9 sm:size-8" onClick={() => setTokenOpen(true)} title="API token">
             <KeyRound />
           </Button>
-          <Button variant="ghost" size="icon" className="size-8" onClick={() => setDark(!dark)} title="Toggle theme">
+          <Button variant="ghost" size="icon" className="size-9 sm:size-8" onClick={() => setDark(!dark)} title="Toggle theme">
             {dark ? <Sun /> : <Moon />}
           </Button>
         </div>
       </div>
 
-      {/* The strip scrolls instead of stretching the page: on a 360px screen the
-          six tabs are ~540px wide, which used to force the document wider than
-          the viewport and pan every page sideways. */}
+      {/* Desktop only. The strip still scrolls rather than stretching the page
+          — eight tabs are wider than a narrow laptop window — but below `sm`
+          it is replaced outright by the burger above, because a strip that
+          scrolls gives no sign that anything is off its right edge. */}
       <Tabs
         value={tab}
         onValueChange={(value) => navigate(value as Tab)}
-        className="w-full min-w-0 overflow-x-auto overflow-y-hidden [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+        className="hidden w-full min-w-0 overflow-x-auto overflow-y-hidden [scrollbar-width:none] sm:block [&::-webkit-scrollbar]:hidden"
       >
         <TabsList
           variant="line"

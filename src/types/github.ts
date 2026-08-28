@@ -26,6 +26,11 @@ export interface Repo {
   /** True for a fork: its contributor list is the upstream project's, not yours. */
   fork?: boolean
   /**
+   * Read-only on GitHub. Every lens filters these out except Sleeping Giants,
+   * which looks for them on purpose and badges what it finds.
+   */
+  archived?: boolean
+  /**
    * Only the `/user/*` reads can ever see this: a `repo`-scoped token returns
    * private repositories, and `watchedRepos`/`starredRepos` filter on it.
    */

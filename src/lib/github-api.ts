@@ -17,6 +17,13 @@ import { onTokenSweep, readToken } from '@/lib/token'
 
 const CACHE_TTL = 30 * 60 * 1000
 const CACHE_PREFIX = 'bx:'
+const FEED_CACHE_KEY = 'explore-feed'
+const FEED_MARKER_KEY = CACHE_PREFIX + 'explore-feed-memory'
+
+interface CacheEntry<T> {
+  t: number
+  v: T
+}
 
 /** The key-value half of the seam. `keys` is what a sweep needs and `Storage` lacks. */
 export interface CacheStore {
@@ -47,6 +54,16 @@ const platform: Adapters = {
 }
 
 let adapters: Adapters = platform
+
+/**
+ * The Explore feed is large and free to fetch. Keeping it in localStorage made
+ * it compete with rate-limited API searches for the browser's small quota, so
+ * Spotlight could evict the lens beside it. Cache it for this page lifetime
+ * and persist only a tiny marker used to invalidate the memory entry when the
+ * backing store is swept.
+ */
+let feedMemory: { marker: string; value: ExploreFeed } | null = null
+let feedInflight: Promise<ExploreFeed> | null = null
 
 /**
  * Swaps what sits behind the seam and returns a restore function.
@@ -103,27 +120,48 @@ function clearCache() {
     .forEach((k) => adapters.store.removeItem(k))
 }
 
-function readCache<T>(key: string): T | null {
+function readCacheEntry<T>(key: string): CacheEntry<T> | null {
   try {
     const raw = adapters.store.getItem(CACHE_PREFIX + key)
     if (!raw) return null
-    const entry = JSON.parse(raw) as { t: number; v: T }
-    return Date.now() - entry.t < CACHE_TTL ? entry.v : null
+    const entry = JSON.parse(raw) as CacheEntry<T>
+    const age = Date.now() - entry.t
+    // Reject corrupt and future timestamps as well as expired entries. Besides
+    // making the cache miss safe, this keeps cache-age copy from ever passing
+    // an invalid date into a formatter.
+    return Number.isFinite(entry.t) && age >= 0 && age < CACHE_TTL ? entry : null
   } catch {
     return null // corrupt entry — treat as a miss
   }
 }
 
+function readCache<T>(key: string): T | null {
+  return readCacheEntry<T>(key)?.v ?? null
+}
+
 function writeCache<T>(key: string, value: T) {
+  const fullKey = CACHE_PREFIX + key
+  const serialized = JSON.stringify({ t: Date.now(), v: value })
   try {
-    adapters.store.setItem(CACHE_PREFIX + key, JSON.stringify({ t: Date.now(), v: value }))
+    adapters.store.setItem(fullKey, serialized)
   } catch {
-    clearCache() // quota exceeded — start over rather than fail the request
+    // Quota exceeded: evict older responses, then give the response the user
+    // just waited for one chance to become the new cache. If it is itself too
+    // large, caching is still best-effort and must not fail the request.
+    clearCache()
+    try {
+      adapters.store.setItem(fullKey, serialized)
+    } catch {
+      // Best-effort cache; the network result remains valid.
+    }
   }
 }
 
 /** GitHub REST call. `fresh` skips the cache for live endpoints. */
-export async function api<T>(path: string, { fresh = false } = {}): Promise<T> {
+export async function api<T>(
+  path: string,
+  { fresh = false, select }: { fresh?: boolean; select?: (data: unknown) => T } = {},
+): Promise<T> {
   if (!fresh) {
     const hit = readCache<T>(path)
     if (hit) return hit
@@ -131,7 +169,7 @@ export async function api<T>(path: string, { fresh = false } = {}): Promise<T> {
     if (pending) return pending as Promise<T>
   }
 
-  const request = requestFromNetwork<T>(path, fresh)
+  const request = requestFromNetwork<T>(path, fresh, select)
   if (!fresh) {
     inflight.set(path, request)
     // Delete only if this promise is still the entry. A token change clears the
@@ -145,7 +183,11 @@ export async function api<T>(path: string, { fresh = false } = {}): Promise<T> {
 }
 
 /** The network half of `api`, split out so the in-flight map stays readable. */
-async function requestFromNetwork<T>(path: string, fresh: boolean): Promise<T> {
+async function requestFromNetwork<T>(
+  path: string,
+  fresh: boolean,
+  select?: (data: unknown) => T,
+): Promise<T> {
   const token = readToken()
   const res = await adapters.fetch('https://api.github.com' + path, {
     headers: {
@@ -184,7 +226,8 @@ async function requestFromNetwork<T>(path: string, fresh: boolean): Promise<T> {
     throw new Error(body.message ?? `GitHub responded ${res.status}`)
   }
 
-  const data = (await res.json()) as T
+  const payload: unknown = await res.json()
+  const data = select ? select(payload) : payload as T
   // The sweep stops a stale promise being *adopted*, but one already awaited
   // here still resolves. Re-reading the token catches that second window —
   // otherwise clicking Clear mid-flight writes the signed-out account's
@@ -193,10 +236,62 @@ async function requestFromNetwork<T>(path: string, fresh: boolean): Promise<T> {
   return data
 }
 
-export const searchRepos = (q: string, { sort = 'stars', perPage = 30, page = 1 } = {}) =>
-  api<{ items: Repo[]; total_count: number }>(
-    `/search/repositories?q=${encodeURIComponent(q)}&sort=${sort}&order=desc&per_page=${perPage}&page=${page}`,
-  )
+export interface SearchOptions {
+  sort?: 'stars' | 'updated'
+  perPage?: number
+  page?: number
+}
+
+interface SearchResponse {
+  items: Repo[]
+  total_count: number
+}
+
+/** Persist only the repository fields the application reads. */
+function compactRepo(repo: Repo): Repo {
+  return {
+    id: repo.id,
+    name: repo.name,
+    full_name: repo.full_name,
+    html_url: repo.html_url,
+    description: repo.description,
+    owner: {
+      login: repo.owner.login,
+      avatar_url: repo.owner.avatar_url,
+      html_url: repo.owner.html_url,
+      type: repo.owner.type,
+    },
+    stargazers_count: repo.stargazers_count,
+    forks_count: repo.forks_count,
+    open_issues_count: repo.open_issues_count,
+    language: repo.language,
+    topics: repo.topics,
+    license: repo.license,
+    created_at: repo.created_at,
+    pushed_at: repo.pushed_at,
+    fork: repo.fork,
+    archived: repo.archived,
+    private: repo.private,
+  }
+}
+
+function compactSearch(payload: unknown): SearchResponse {
+  const response = payload as SearchResponse
+  return {
+    items: (response.items ?? []).map(compactRepo),
+    total_count: response.total_count ?? 0,
+  }
+}
+
+/** One place the search path is spelled, defaults included. */
+const searchPath = (
+  q: string,
+  { sort = 'stars', perPage = 30, page = 1 }: SearchOptions = {},
+): string =>
+  `/search/repositories?q=${encodeURIComponent(q)}&sort=${sort}&order=desc&per_page=${perPage}&page=${page}`
+
+export const searchRepos = (q: string, options: SearchOptions = {}) =>
+  api<SearchResponse>(searchPath(q, options), { select: compactSearch })
 
 /** `repo:a/b repo:c/d` is OR-ed by search, so a whole collection costs one request. */
 export const reposByName = (names: string[]) =>
@@ -204,16 +299,44 @@ export const reposByName = (names: string[]) =>
     ? searchRepos(names.map((n) => `repo:${n}`).join(' '), { perPage: 100 }).then((r) => r.items)
     : Promise.resolve<Repo[]>([])
 
-/** All 111 collections and 1200+ topics behind github.com/explore, in one request. */
-export async function exploreFeed(): Promise<ExploreFeed> {
-  const hit = readCache<ExploreFeed>('explore-feed')
-  if (hit) return hit
+function rememberFeed(value: ExploreFeed): ExploreFeed {
+  // Remove the old, large persisted representation when upgrading an existing
+  // browser. The small marker keeps test/store sweeps observable to memory.
+  adapters.store.removeItem(CACHE_PREFIX + FEED_CACHE_KEY)
+  const marker = String(Date.now())
+  try {
+    adapters.store.setItem(FEED_MARKER_KEY, marker)
+    feedMemory = { marker, value }
+  } catch {
+    feedMemory = null
+  }
+  return value
+}
+
+async function fetchExploreFeed(): Promise<ExploreFeed> {
   const res = await adapters.fetch('https://explore-feed.github.com/feed.json')
   if (!res.ok) throw new Error('Could not load the GitHub Explore feed')
   const data = (await res.json()) as Partial<ExploreFeed>
-  const feed = { topics: data.topics ?? [], collections: data.collections ?? [] }
-  writeCache('explore-feed', feed)
-  return feed
+  return rememberFeed({ topics: data.topics ?? [], collections: data.collections ?? [] })
+}
+
+/** All 111 collections and 1200+ topics behind github.com/explore, in one request. */
+export async function exploreFeed(): Promise<ExploreFeed> {
+  if (feedMemory && adapters.store.getItem(FEED_MARKER_KEY) === feedMemory.marker) {
+    return feedMemory.value
+  }
+  feedMemory = null
+
+  // One-time migration for browsers carrying the previous large entry.
+  const persisted = readCache<ExploreFeed>(FEED_CACHE_KEY)
+  if (persisted) return rememberFeed(persisted)
+
+  if (!feedInflight) {
+    feedInflight = fetchExploreFeed().finally(() => {
+      feedInflight = null
+    })
+  }
+  return feedInflight
 }
 
 /** Raw file read, outside the API rate limit. Returns null when absent. */
