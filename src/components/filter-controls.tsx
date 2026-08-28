@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react'
 import { Button } from '@/components/ui/button'
 import {
   Select, SelectContent, SelectItem, SelectTrigger, SelectValue,
@@ -13,6 +14,16 @@ export interface Option<T extends string> {
 export function Segmented<T extends string>({
   value, options, onChange,
 }: { value: T; options: readonly Option<T>[]; onChange: (value: T) => void }) {
+  const active = useRef<HTMLButtonElement>(null)
+
+  // Scrolling the rail means the selection can start off-screen: a deep link to
+  // `#/discover/class-2016` put its pill at x=842 in a 351px strip, with nothing
+  // else on the page naming the active lens. Options that fit never scroll, so
+  // this is inert for the two- and three-option rails.
+  useEffect(() => {
+    active.current?.scrollIntoView({ block: 'nearest', inline: 'nearest' })
+  }, [value])
+
   return (
     // Scrolls rather than wrapping. Four options fit a phone row and never
     // scroll; the eight-lens rail would otherwise stack into three rows above
@@ -22,6 +33,7 @@ export function Segmented<T extends string>({
       {options.map((option) => (
         <Button
           key={option.value}
+          ref={value === option.value ? active : undefined}
           size="sm"
           variant={value === option.value ? 'secondary' : 'ghost'}
           className={cn('h-8 shrink-0 px-3.5 text-sm', value !== option.value && 'text-muted-foreground')}

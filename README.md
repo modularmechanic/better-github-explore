@@ -133,7 +133,7 @@ and sent only to `api.github.com`.
 
 ## Layout
 
-```
+```text
 src/
   lib/          github-api.ts (fetch + cache + rate limit), funding-yml.ts (parser), format.ts,
                 trending-parse.ts + explore-pages-parse.ts (the scrapers' HTML parsing, unit-tested

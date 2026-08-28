@@ -74,7 +74,7 @@ const topicsOf = ({ category, topic }: Selection): (string | undefined)[] => {
  * it — the live top ten of both Rising Stars and Fresh Finds carried lists
  * before it did.
  */
-async function loadSelection(selection: Selection): Promise<{ items: Repo[]; missing: number }> {
+async function loadSelection(selection: Selection): Promise<SelectionResult> {
   const { lens } = selection
   const topics = topicsOf(selection)
   const perPage = topics.length > 1 ? PER_TOPIC : PER_LENS
@@ -85,8 +85,8 @@ async function loadSelection(selection: Selection): Promise<{ items: Repo[]; mis
   //
   // allSettled, not all: a bundle is nine independent searches, and `all`
   // would throw away eight good ones because the ninth hit a rate limit. A
-  // category is still worth reading eight-ninths complete — the footnote says
-  // so — and only a total failure is an error worth showing.
+  // category is still worth reading eight-ninths complete — `missing` says how
+  // short it is — and only a total failure is an error worth showing.
   const settled = await Promise.allSettled(
     topics.map((topic) => fetchQuery(selection, topic, perPage)),
   )
@@ -104,6 +104,7 @@ async function loadSelection(selection: Selection): Promise<{ items: Repo[]; mis
   return {
     items: lens.rank ? lens.rank(merged) : merged,
     missing: settled.length - slices.length,
+    total: settled.length,
   }
 }
 
@@ -111,6 +112,8 @@ export interface SelectionResult {
   items: Repo[]
   /** Topics of a bundle whose search failed. Zero for a whole result. */
   missing: number
+  /** Searches this result was assembled from — the denominator for `missing`. */
+  total: number
 }
 
 /** Results, plus how much of a bundle could not be fetched. */

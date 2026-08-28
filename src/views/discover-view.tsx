@@ -17,7 +17,7 @@ import { DEFAULT_LENS, LENS_OPTIONS, LENSES, type LensSlug } from '@/lib/discove
 import {
   packSelection, unpackSelection, YEARS, type Selection,
 } from '@/lib/discover-selection'
-import { fetchSelectionResult, queryFor, requestCost } from '@/lib/discover-search'
+import { fetchSelectionResult, queryFor } from '@/lib/discover-search'
 import { matches } from '@/lib/format'
 import { SPOKEN_LANGUAGES, matchesLanguage } from '@/lib/spoken-language'
 import type { Repo } from '@/types/github'
@@ -95,7 +95,7 @@ export function DiscoverView({ lens, search }: { lens: string | null; search: st
           out loud even though the rest of the results are worth showing. */}
       {!!result.data?.missing && (
         <p className="text-sm text-muted-foreground">
-          {result.data.missing} of {requestCost(selection)} topic searches failed — showing the rest.
+          {result.data.missing} of {result.data.total} topic searches failed — showing the rest.
         </p>
       )}
 

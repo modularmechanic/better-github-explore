@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { createPortal } from 'react-dom'
 import { Check, Compass, Flame, KeyRound, Menu as MenuIcon, Moon, Search, Sun } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -51,6 +52,12 @@ function RateBadge() {
  * Plain state rather than a menu library: this is a list of links that closes
  * when you pick one. The backdrop below is what dismisses it, so there is no
  * document listener to attach, leak, or fight with the dialog above it.
+ *
+ * That backdrop is portalled to `document.body` rather than rendered in place.
+ * The header carries `backdrop-blur-xl`, and an element with a backdrop-filter
+ * becomes the containing block for `position: fixed` descendants — so `inset-0`
+ * resolved to the 108px header rather than the viewport, and a tap below it
+ * reached the page instead of closing the menu.
  */
 function TabMenu({ tab, tabs }: { tab: Tab; tabs: readonly Tab[] }) {
   const [open, setOpen] = useState(false)
@@ -76,7 +83,15 @@ function TabMenu({ tab, tabs }: { tab: Tab; tabs: readonly Tab[] }) {
 
       {open && (
         <>
-          <div className="fixed inset-0 z-40" aria-hidden onClick={() => setOpen(false)} />
+          {createPortal(
+            <div
+              data-slot="nav-backdrop"
+              className="fixed inset-0 z-40"
+              aria-hidden
+              onClick={() => setOpen(false)}
+            />,
+            document.body,
+          )}
           <div
             role="menu"
             className="absolute top-full left-0 z-50 mt-2 w-56 rounded-xl bg-popover p-1.5 text-popover-foreground shadow-lg ring-1 ring-foreground/10"

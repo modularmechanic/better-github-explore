@@ -25,6 +25,8 @@ if (isDom) {
   window.IntersectionObserver = NoopObserver as unknown as typeof IntersectionObserver
   window.ResizeObserver = NoopObserver as unknown as typeof ResizeObserver
   window.scrollTo = vi.fn() // Pagination calls it; jsdom throws "not implemented".
+  // Segmented keeps the active pill in view; jsdom defines no scrollIntoView.
+  Element.prototype.scrollIntoView = vi.fn()
 }
 
 afterEach(async () => {

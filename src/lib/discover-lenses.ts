@@ -6,8 +6,8 @@
  * opposite. Each lens is a search query we chose, answering a discovery
  * question the trending page cannot ask — what is quietly good, what old thing
  * is still cared for, what appeared this week. Both sets of results are
- * "trending" in the ordinary sense of the word; naming each lens and printing
- * its query under the results is what keeps the two honest about which is which.
+ * "trending" in the ordinary sense of the word; naming each lens on the rail is
+ * what keeps the two honest about which is which.
  *
  * This module is definitions only. Route encoding lives in
  * `discover-selection`; fetching lives in `discover-search`.

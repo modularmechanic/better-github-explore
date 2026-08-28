@@ -64,9 +64,23 @@ it('closes when the page behind it is tapped', () => {
   render(<AppHeader tab="explore" search="" onSearchChange={() => {}} />)
   openMenu()
 
-  fireEvent.click(document.querySelector('[aria-hidden]')!)
+  // By slot, not by [aria-hidden]: every lucide icon carries that attribute,
+  // and the burger's own icon comes first in the document — clicking it closed
+  // the menu through the trigger and made this test pass without a backdrop.
+  const backdrop = document.querySelector('[data-slot="nav-backdrop"]')
+  expect(backdrop).not.toBeNull()
+  fireEvent.click(backdrop!)
 
   expect(screen.queryByRole('menu')).toBeNull()
+})
+
+it('covers the viewport with the backdrop, not just the blurred header', () => {
+  // A backdrop-filter ancestor becomes the containing block for fixed children,
+  // so an in-place backdrop shrank to the header and left the menu untappable.
+  render(<AppHeader tab="explore" search="" onSearchChange={() => {}} />)
+  openMenu()
+
+  expect(document.querySelector('[data-slot="nav-backdrop"]')?.parentElement).toBe(document.body)
 })
 
 it('keeps the desktop tab strip in the markup for wider viewports', () => {
