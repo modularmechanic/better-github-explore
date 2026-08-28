@@ -14,6 +14,7 @@ import { RepoQuickview } from '@/components/repo-quickview'
 import { useInView } from '@/hooks/use-in-view'
 import { useReadme } from '@/hooks/use-readme'
 import { compactNumber, headline, starVelocity, timeAgo } from '@/lib/format'
+import type { RepoBadge } from '@/lib/discover-badges'
 import { navigate } from '@/hooks/use-hash-route'
 import { cn } from '@/lib/utils'
 import type { Repo } from '@/types/github'
@@ -30,7 +31,12 @@ function Stat({ icon: Icon, value, title }: { icon: typeof Star; value: string; 
   )
 }
 
-export function RepoCard({ repo }: { repo: Repo }) {
+/**
+ * `badges` is an opt-in slot rather than something the card derives: only the
+ * Discover tab has anything to say here, and the six other views that render
+ * this card should not grow a label they never asked for.
+ */
+export function RepoCard({ repo, badges = [] }: { repo: Repo; badges?: RepoBadge[] }) {
   const [expanded, setExpanded] = useState(false)
   const [quickview, setQuickview] = useState(false)
   const { ref, inView } = useInView<HTMLDivElement>()
@@ -46,6 +52,16 @@ export function RepoCard({ repo }: { repo: Repo }) {
       <div className="flex items-center gap-2 kicker">
         <span className="truncate">{repo.language ?? 'Repository'}</span>
         <div className="ml-auto flex shrink-0 items-center gap-1">
+          {badges.map((badge) => (
+            <Badge
+              key={badge.label}
+              variant={badge.tone === 'warn' ? 'destructive' : 'outline'}
+              title={badge.title}
+              className="tracking-normal"
+            >
+              {badge.label}
+            </Badge>
+          ))}
           {velocity >= 1 && (
             <Badge variant={velocity >= 50 ? 'default' : 'secondary'} className="font-mono tracking-normal">
               <TrendingUp /> {velocity >= 20 ? compactNumber(Math.round(velocity)) : velocity.toFixed(1)}/d

@@ -14,6 +14,7 @@ const LABELS: Record<Tab, string> = {
   explore: 'Explore',
   you: 'You',
   trending: 'Trending',
+  discover: 'Discover',
   topics: 'Topics',
   collections: 'Collections',
   events: 'Events',

@@ -32,3 +32,7 @@ coverage
 
 .omc/
 .claude/
+
+# Working notes and research reports, like the two above. Decisions that outlive
+# the session belong in docs/adr and CONTEXT.md, which are tracked.
+plans/

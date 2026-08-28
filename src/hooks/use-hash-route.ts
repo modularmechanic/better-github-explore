@@ -1,14 +1,26 @@
 import { useEffect, useState } from 'react'
 
-export const TABS = ['explore', 'you', 'trending', 'topics', 'collections', 'events', 'sponsors'] as const
+export const TABS = [
+  'explore', 'you', 'trending', 'discover', 'topics', 'collections', 'events', 'sponsors',
+] as const
 export type Tab = (typeof TABS)[number]
 
-/** Tabs that exist only while a token is stored. */
-const TOKEN_ONLY: readonly Tab[] = ['you']
+/**
+ * Tabs that exist only while a token is stored.
+ *
+ * `you` reads the viewer's own account, so it cannot work without one.
+ * `discover` could — a lens costs one search — but is gated deliberately; the
+ * reasoning is in docs/adr/0001-discover-is-token-gated-and-always-live.md.
+ */
+const TOKEN_ONLY: readonly Tab[] = ['you', 'discover']
+
+/** Whether a tab may render at all in the current auth state. */
+export const tabAllowed = (tab: Tab, hasToken: boolean): boolean =>
+  hasToken || !TOKEN_ONLY.includes(tab)
 
 /** The tab strip for the current auth state. Hidden tabs are not rendered at all. */
 export const visibleTabs = (hasToken: boolean): readonly Tab[] =>
-  hasToken ? TABS : TABS.filter((tab) => !TOKEN_ONLY.includes(tab))
+  TABS.filter((tab) => tabAllowed(tab, hasToken))
 
 export interface Route {
   tab: Tab

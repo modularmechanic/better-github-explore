@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react'
 import { AppHeader } from '@/components/app-header'
 import { useAsync } from '@/hooks/use-async'
-import { useHashRoute } from '@/hooks/use-hash-route'
+import { tabAllowed, useHashRoute } from '@/hooks/use-hash-route'
 import { useToken } from '@/hooks/use-token'
 import { loadLanguageColors } from '@/lib/language-colors'
 import { CollectionDetailView } from '@/views/collection-detail-view'
 import { CollectionsView } from '@/views/collections-view'
+import { DiscoverView } from '@/views/discover-view'
 import { EventsView } from '@/views/events-view'
 import { ExploreView } from '@/views/explore-view'
 import { SponsorsView } from '@/views/sponsors-view'
@@ -17,8 +18,9 @@ import { YouView } from '@/views/you-view'
 export default function App() {
   const route = useHashRoute()
   const { has, version } = useToken()
-  // A bookmarked #/you after the token is cleared must not render an empty tab.
-  const tab = route.tab === 'you' && !has ? 'explore' : route.tab
+  // A bookmarked token-only tab, opened after the token is cleared, must not
+  // render an empty shell. One guard for every such tab, not one per tab.
+  const tab = tabAllowed(route.tab, has) ? route.tab : 'explore'
   const { param } = route
   const [search, setSearch] = useState('')
 
@@ -38,6 +40,7 @@ export default function App() {
         {tab === 'explore' && <ExploreView search={search} />}
         {tab === 'you' && <YouView search={search} />}
         {tab === 'trending' && <TrendingView search={search} />}
+        {tab === 'discover' && <DiscoverView lens={param} search={search} />}
         {tab === 'topics' && (param
           ? <TopicDetailView topic={param} search={search} />
           : <TopicsView search={search} />)}

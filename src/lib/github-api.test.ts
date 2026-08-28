@@ -209,6 +209,24 @@ describe('cache writes that cannot be stored', () => {
     expect(localStorage.getItem('bx:/other')).toBeNull()
     setItem.mockRestore()
   })
+
+  it('retries the current response after evicting older entries', async () => {
+    localStorage.setItem('bx:/other', JSON.stringify({ t: Date.now(), v: 'evict me' }))
+    const original = Storage.prototype.setItem
+    const setItem = vi.spyOn(Storage.prototype, 'setItem')
+      .mockImplementationOnce(() => {
+        throw new Error('QuotaExceededError')
+      })
+      .mockImplementation(function (this: Storage, key, value) {
+        return original.call(this, key, value)
+      })
+    stubFetch(response({ id: 2 }))
+
+    expect(await api('/repos/a/b')).toEqual({ id: 2 })
+    expect(JSON.parse(localStorage.getItem(CACHE_KEY)!).v).toEqual({ id: 2 })
+    expect(localStorage.getItem('bx:/other')).toBeNull()
+    setItem.mockRestore()
+  })
 })
 
 describe('error bodies that are not JSON', () => {
@@ -242,13 +260,60 @@ describe('searchRepos', () => {
         '&sort=updated&order=desc&per_page=50&page=2',
     )
   })
+
+
+
+  it('compacts GitHub search items before returning and caching them', async () => {
+    const item = {
+      id: 1,
+      name: 'tool',
+      full_name: 'owner/tool',
+      html_url: 'https://github.com/owner/tool',
+      description: null,
+      owner: { login: 'owner', avatar_url: '', html_url: '', type: 'User', noisy_owner_field: 'drop' },
+      stargazers_count: 10,
+      forks_count: 2,
+      open_issues_count: 1,
+      language: 'TypeScript',
+      topics: ['tool'],
+      license: null,
+      created_at: '2025-01-01T00:00:00Z',
+      pushed_at: '2026-01-01T00:00:00Z',
+      noisy_search_field: 'drop',
+    }
+    stubFetch(response({ items: [item], total_count: 1, incomplete_results: false }))
+
+    const found = await searchRepos('repo:owner/tool')
+    const key = Object.keys(localStorage).find((candidate) => candidate.includes('repo%3Aowner%2Ftool'))!
+    const stored = localStorage.getItem(key)!
+
+    expect(found.items[0]).not.toHaveProperty('noisy_search_field')
+    expect(found.items[0].owner).not.toHaveProperty('noisy_owner_field')
+    expect(stored).not.toContain('noisy_search_field')
+    expect(stored).not.toContain('noisy_owner_field')
+  })
 })
 
 describe('reposByName', () => {
   it('OR-s every name into a single search request', async () => {
-    const fetchMock = stubFetch(response({ items: [{ id: 1 }], total_count: 1 }))
+    const item = {
+      id: 1,
+      name: 'b',
+      full_name: 'a/b',
+      html_url: 'https://github.com/a/b',
+      description: null,
+      owner: { login: 'a', avatar_url: '', html_url: '' },
+      stargazers_count: 1,
+      forks_count: 0,
+      open_issues_count: 0,
+      language: null,
+      license: null,
+      created_at: '2025-01-01T00:00:00Z',
+      pushed_at: '2026-01-01T00:00:00Z',
+    }
+    const fetchMock = stubFetch(response({ items: [item], total_count: 1 }))
 
-    expect(await reposByName(['a/b', 'c/d'])).toEqual([{ id: 1 }])
+    expect(await reposByName(['a/b', 'c/d'])).toEqual([expect.objectContaining({ id: 1 })])
     expect(fetchMock.mock.calls[0][0]).toContain(encodeURIComponent('repo:a/b repo:c/d'))
   })
 
@@ -262,23 +327,28 @@ describe('reposByName', () => {
 
 describe('exploreFeed', () => {
   const FEED_KEY = 'bx:explore-feed'
+  const FEED_MARKER = 'bx:explore-feed-memory'
 
-  it('fetches the feed and caches it', async () => {
+  it('fetches the feed and caches it in memory without consuming API-cache quota', async () => {
     const feed = { topics: [{ topic_name: 'react' }], collections: [{ name: 'dev-tools' }] }
     const fetchMock = stubFetch(response(feed))
 
     expect(await exploreFeed()).toEqual(feed)
+    expect(await exploreFeed()).toEqual(feed)
     expect(fetchMock).toHaveBeenCalledExactlyOnceWith('https://explore-feed.github.com/feed.json')
-    expect(JSON.parse(localStorage.getItem(FEED_KEY)!).v).toEqual(feed)
+    expect(localStorage.getItem(FEED_KEY)).toBeNull()
+    expect(localStorage.getItem(FEED_MARKER)).not.toBeNull()
   })
 
-  it('serves a cached feed without a request', async () => {
+  it('migrates a previously persisted feed without a request', async () => {
     const feed = { topics: [], collections: [] }
     localStorage.setItem(FEED_KEY, JSON.stringify({ t: Date.now(), v: feed }))
     const fetchMock = stubFetch()
 
     expect(await exploreFeed()).toEqual(feed)
     expect(fetchMock).not.toHaveBeenCalled()
+    expect(localStorage.getItem(FEED_KEY)).toBeNull()
+    expect(localStorage.getItem(FEED_MARKER)).not.toBeNull()
   })
 
   it('defaults missing sections to empty arrays rather than undefined', async () => {
