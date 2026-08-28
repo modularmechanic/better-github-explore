@@ -14,14 +14,17 @@ export function Segmented<T extends string>({
   value, options, onChange,
 }: { value: T; options: readonly Option<T>[]; onChange: (value: T) => void }) {
   return (
-    // Wraps rather than overflowing: three or four options do not fit a phone row.
-    <div className="flex flex-wrap items-center gap-0.5 rounded-xl border bg-card p-1">
+    // Scrolls rather than wrapping. Four options fit a phone row and never
+    // scroll; the eight-lens rail would otherwise stack into three rows above
+    // the results. Unlike the tab strip this keeps its affordance — the next
+    // pill sits half-visible at the edge rather than ending flush with it.
+    <div className="flex items-center gap-0.5 overflow-x-auto rounded-xl border bg-card p-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
       {options.map((option) => (
         <Button
           key={option.value}
           size="sm"
           variant={value === option.value ? 'secondary' : 'ghost'}
-          className={cn('h-8 px-3.5 text-sm', value !== option.value && 'text-muted-foreground')}
+          className={cn('h-8 shrink-0 px-3.5 text-sm', value !== option.value && 'text-muted-foreground')}
           onClick={() => onChange(option.value)}
         >
           {option.label}
