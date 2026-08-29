@@ -6,6 +6,18 @@ import { Card } from '@/components/ui/card'
 import { cn } from '@/lib/utils'
 import type { ResourceEvent } from '@/types/github'
 
+/**
+ * One clock reading for the whole list, taken when the module loads rather than
+ * inside render. `Date.now()` in a render body makes the component impure — two
+ * renders of the same event can disagree — and a card reading its own instant
+ * can disagree with the card beside it across a date boundary.
+ *
+ * Deliberately not live. Nothing here re-renders on a timer, the events are a
+ * snapshot refreshed every few hours, and an event quietly reclassifying itself
+ * mid-session would be stranger than one that waits for a reload.
+ */
+const LOADED_AT = Date.now()
+
 const formatDate = (iso: string | null) =>
   iso
     ? new Date(iso).toLocaleDateString(undefined, { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' })
@@ -13,7 +25,7 @@ const formatDate = (iso: string | null) =>
 
 /** An event, webinar or workshop from github.com/resources/events. */
 export function ResourceEventCard({ event }: { event: ResourceEvent }) {
-  const past = event.date ? new Date(event.date).getTime() < Date.now() : false
+  const past = event.date ? new Date(event.date).getTime() < LOADED_AT : false
   const InPerson = event.type === 'In Person'
   const [loaded, setLoaded] = useState(false)
 
