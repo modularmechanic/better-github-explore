@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { BackToGitHub } from '@/components/back-to-github'
+import { StarThisRepo } from '@/components/star-this-repo'
 import { TokenDialog } from '@/components/token-dialog'
 import { onRateLimit, rateLimit } from '@/lib/github-api'
 import { navigate, visibleTabs, type Tab } from '@/hooks/use-hash-route'
@@ -163,6 +164,7 @@ export function AppHeader({
 
         <div className="ml-auto flex items-center gap-1.5 sm:ml-0">
           <RateBadge />
+          <StarThisRepo />
           <Button variant="ghost" size="icon" className="size-9 sm:size-8" onClick={() => setTokenOpen(true)} title="API token">
             <KeyRound />
           </Button>
@@ -203,6 +205,11 @@ export function AppHeader({
             <stop offset="0%" stopColor="#e5484d" />
             <stop offset="55%" stopColor="#f76808" />
             <stop offset="100%" stopColor="#ffca16" />
+          </linearGradient>
+          <linearGradient id="star-gradient" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="#ffe9a3" />
+            <stop offset="45%" stopColor="#ffca16" />
+            <stop offset="100%" stopColor="#e8a723" />
           </linearGradient>
         </defs>
       </svg>

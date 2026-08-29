@@ -43,7 +43,7 @@ export function RepoCard({ repo, badges = [] }: { repo: Repo; badges?: RepoBadge
 
   // The README is only fetched once the card is on screen; it supplies both the
   // media preview and the expanded excerpt.
-  const { readme, loading } = useReadme(repo, inView)
+  const { readme, loading, settled } = useReadme(repo, inView)
   const velocity = starVelocity(repo)
 
   return (
@@ -112,7 +112,7 @@ export function RepoCard({ repo, badges = [] }: { repo: Repo; badges?: RepoBadge
         </span>
       </div>
 
-      {readme?.media && <RepoMedia media={readme.media} className="h-32" />}
+      <RepoMedia media={readme?.media ?? null} loading={!settled} className="h-32" />
 
       {repo.description && (
         <p className="line-clamp-3 text-sm leading-relaxed text-muted-foreground">{repo.description}</p>

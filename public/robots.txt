@@ -1,0 +1,9 @@
+# Everything here is a public snapshot of public GitHub pages. Nothing is
+# gated, so nothing is disallowed.
+User-agent: *
+Allow: /
+
+# What this site lists, as markdown, for anything that would otherwise get the
+# empty page shell this single-page app serves. See llmstxt.org.
+# Regenerated with the data snapshots by .github/workflows/sync-data.yml.
+Sitemap: https://modularmechanic.github.io/better-github-explore/sitemap.xml

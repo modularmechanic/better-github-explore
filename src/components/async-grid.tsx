@@ -27,6 +27,17 @@ const gridClass = (dense?: boolean, className?: string) =>
     ? 'grid-cols-[repeat(auto-fill,minmax(max(13rem,(100%_-_5rem)/6),1fr))]'
     : 'grid-cols-[repeat(auto-fill,minmax(max(19rem,(100%_-_3rem)/4),1fr))]', className)
 
+/**
+ * Cards arrive together rather than blinking into place. Applied to the grid's
+ * children instead of to each card component so one rule covers every view, and
+ * so it stays out of components/ui, which shadcn regenerates.
+ *
+ * Mount-triggered, so it plays once when a result set lands and not on the
+ * re-renders that follow. Kept short: this is meant to take the edge off the
+ * swap from skeletons, not to be noticed as an animation.
+ */
+const CARD_ENTRANCE = '[&>*]:animate-in [&>*]:fade-in-0 [&>*]:duration-200'
+
 /** One place to render loading, error, empty and success for every view. */
 export function AsyncGrid<T>({
   state, children, dense, className, emptyMessage = 'Nothing matched.', skeletonCount = 9,
@@ -44,7 +55,7 @@ export function AsyncGrid<T>({
   if (state.error) return <Notice icon={AlertCircle} title="Something went wrong" detail={state.error} />
   if (!state.data?.length) return <Notice icon={SearchX} title={emptyMessage} />
 
-  return <div className={gridClass(dense, className)}>{children(state.data)}</div>
+  return <div className={cn(gridClass(dense, className), CARD_ENTRANCE)}>{children(state.data)}</div>
 }
 
 /**

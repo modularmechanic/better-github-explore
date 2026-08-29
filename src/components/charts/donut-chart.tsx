@@ -15,16 +15,30 @@ const CIRCUMFERENCE = 2 * Math.PI * RADIUS
 export function DonutChart({
   slices, total, unit,
 }: { slices: Slice[]; total: number; unit: string }) {
-  let offset = 0
+  /*
+   * Each segment starts where the ones before it end, so the offsets are a
+   * running total. Accumulated up front rather than with a `let` the map body
+   * advances: mutating a variable mid-render makes the output depend on the
+   * map running exactly once, in order, which is a promise React does not make
+   * — a re-render that reuses part of the list would resume the count from
+   * wherever it stopped and skew every segment after it.
+   */
+  const offsets: number[] = []
+  let running = 0
+  for (const slice of slices) {
+    offsets.push(running)
+    running += (slice.value / total) * CIRCUMFERENCE
+  }
 
   return (
     <div className="flex flex-wrap items-center justify-center gap-5 sm:justify-start">
       <svg viewBox="0 0 140 140" className="size-36 shrink-0" role="img" aria-label={`${unit} by share`}>
         <g transform="rotate(-90 70 70)">
-          {slices.map((slice) => {
+          {slices.map((slice, i) => {
             const length = (slice.value / total) * CIRCUMFERENCE
             const dash = Math.max(0, length - GAP)
-            const segment = (
+            const offset = offsets[i]
+            return (
               <circle
                 key={slice.label}
                 cx="70" cy="70" r={RADIUS}
@@ -38,8 +52,6 @@ export function DonutChart({
                 <title>{`${slice.label}: ${slice.value} ${unit} (${Math.round((slice.value / total) * 100)}%)`}</title>
               </circle>
             )
-            offset += length
-            return segment
           })}
         </g>
         <text x="70" y="66" textAnchor="middle" className="fill-foreground text-[19px] font-semibold">

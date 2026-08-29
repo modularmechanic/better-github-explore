@@ -5,6 +5,16 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Better GitHub Explore</title>
+    <meta
+      name="description"
+      content="A replacement UI for github.com/explore: GitHub's trending repositories, topics, collections, events and sponsorable projects, in one place."
+    />
+    <!--
+      The page renders client-side, so a fetcher without JavaScript gets the
+      empty shell below. llms.txt is the same catalogue as markdown; it is
+      regenerated with the data snapshots by .github/workflows/sync-data.yml.
+    -->
+    <link rel="alternate" type="text/markdown" href="./llms.txt" title="Site contents as markdown" />
   </head>
   <body>
     <div id="root"></div>

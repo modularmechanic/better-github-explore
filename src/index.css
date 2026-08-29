@@ -36,6 +36,35 @@
     --radius-2xl: calc(var(--radius) * 1.8);
     --radius-3xl: calc(var(--radius) * 2.2);
     --radius-4xl: calc(var(--radius) * 2.6);
+
+    /*
+     * The star in the header catches the light once every seven seconds rather
+     * than animating continuously: a permanently moving control in a sticky bar
+     * sits in the reader's periphery for the whole session, and the point here
+     * is to be noticed occasionally, not to be a distraction. Both keyframes
+     * share the period so the glare and the twinkle land together; the work
+     * happens in the first ~12% and the rest of the cycle is deliberately dead.
+     */
+    --animate-star-shine: star-shine 7s ease-in-out infinite;
+    --animate-star-twinkle: star-twinkle 7s ease-in-out infinite;
+
+    /*
+     * A band of light travelling across the face of the button. The skew is in
+     * the keyframes rather than a `skew-x-*` class because both compile to
+     * `transform`, and the animation wins — set as a class it is silently
+     * dropped for the whole run and the glare reads as a flat vertical bar.
+     */
+    @keyframes star-shine {
+        0%   { transform: translateX(-120%) skewX(12deg); }
+        12%  { transform: translateX(120%)  skewX(12deg); }
+        100% { transform: translateX(120%)  skewX(12deg); }
+    }
+
+    @keyframes star-twinkle {
+        0%, 100% { transform: scale(1)    rotate(0deg); }
+        4%       { transform: scale(1.18) rotate(-8deg); }
+        9%       { transform: scale(1)    rotate(0deg); }
+    }
 }
 
 :root {
@@ -120,6 +149,21 @@
    */
   :is([data-slot='input'], [data-slot='select-trigger']):not(:focus-visible):not([aria-invalid='true']) {
     border-color: var(--border-control);
+  }
+
+  /*
+   * The star's shine is decoration and nothing depends on seeing it move, so a
+   * reader who has asked for less motion simply gets a still gold star. Matches
+   * how the vendored shadcn stylesheet retires its own `shimmer`.
+   */
+  @media (prefers-reduced-motion: reduce) {
+    [data-slot='star-shine'],
+    [data-slot='star-icon'] {
+      animation: none;
+    }
+    [data-slot='star-shine'] {
+      display: none;
+    }
   }
 }
 

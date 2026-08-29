@@ -16,7 +16,7 @@ import type { Repo } from '@/types/github'
 export function RepoQuickview({
   repo, open, onOpenChange,
 }: { repo: Repo; open: boolean; onOpenChange: (open: boolean) => void }) {
-  const { readme, loading } = useReadme(repo, open)
+  const { readme, loading, settled } = useReadme(repo, open)
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
@@ -86,7 +86,7 @@ export function RepoQuickview({
         {/* Native scrolling: the dialog body is the only scroll container. */}
         <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain">
           <div className="space-y-4 p-5">
-            {readme?.media && <RepoMedia media={readme.media} className="h-56" />}
+            <RepoMedia media={readme?.media ?? null} loading={!settled} className="h-56" />
             {loading && !readme && (
               <p className="flex items-center gap-2 py-10 text-sm text-muted-foreground">
                 <Loader2 className="size-4 animate-spin" /> Loading README…

@@ -18,6 +18,9 @@
     "jsx": "react-jsx",
 
     /* Linting */
+    // Zero errors when this was turned on: the code was already written to
+    // strict's rules, the flag just was not set to hold it there.
+    "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "erasableSyntaxOnly": true,
