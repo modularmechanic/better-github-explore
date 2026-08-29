@@ -1,7 +1,9 @@
+import { useState } from 'react'
 import { CalendarDays, ExternalLink, Globe, MapPin, Radio } from 'lucide-react'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
+import { cn } from '@/lib/utils'
 import type { ResourceEvent } from '@/types/github'
 
 const formatDate = (iso: string | null) =>
@@ -13,15 +15,24 @@ const formatDate = (iso: string | null) =>
 export function ResourceEventCard({ event }: { event: ResourceEvent }) {
   const past = event.date ? new Date(event.date).getTime() < Date.now() : false
   const InPerson = event.type === 'In Person'
+  const [loaded, setLoaded] = useState(false)
 
   return (
     <Card className="group flex flex-col gap-0 overflow-hidden p-0 transition-colors hover:border-primary/40">
       {event.image && (
+        // The banner is sized from the snapshot, so nothing moves when it
+        // arrives — it only needs to stop appearing all at once. `bg-muted`
+        // holds the space visibly and the picture fades over it on decode.
+        // Left unwrapped on purpose: Card rounds a direct `img:first-child`.
         <img
           src={`${event.image}?w=720&fm=webp`}
           alt=""
           loading="lazy"
-          className="h-40 w-full border-b object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+          onLoad={() => setLoaded(true)}
+          className={cn(
+            'h-40 w-full border-b bg-muted object-cover transition duration-300 group-hover:scale-[1.02]',
+            loaded ? 'opacity-100' : 'opacity-0',
+          )}
         />
       )}
 

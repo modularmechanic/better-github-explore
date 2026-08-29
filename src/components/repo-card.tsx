@@ -112,7 +112,7 @@ export function RepoCard({ repo, badges = [] }: { repo: Repo; badges?: RepoBadge
         </span>
       </div>
 
-      {readme?.media && <RepoMedia media={readme.media} className="h-32" />}
+      <RepoMedia media={readme?.media ?? null} loading={loading} className="h-32" />
 
       {repo.description && (
         <p className="line-clamp-3 text-sm leading-relaxed text-muted-foreground">{repo.description}</p>

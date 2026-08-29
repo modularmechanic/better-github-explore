@@ -48,7 +48,7 @@ export function TrendingRepoCard({ repo, since }: { repo: TrendingRepo; since: T
   // Memoised: useReadme keys its effect on this object, so a fresh one each
   // render would refetch in a loop.
   const asRest = useMemo(() => asRepo(repo), [repo])
-  const { readme } = useReadme(asRest, inView)
+  const { readme, loading } = useReadme(asRest, inView)
 
   return (
     <Card ref={ref} className="group flex flex-col gap-3 p-5 transition-colors hover:border-primary/40">
@@ -101,7 +101,7 @@ export function TrendingRepoCard({ repo, since }: { repo: TrendingRepo; since: T
         )}
       </div>
 
-      {readme?.media && <RepoMedia media={readme.media} className="h-32" />}
+      <RepoMedia media={readme?.media ?? null} loading={loading} className="h-32" />
 
       {repo.description && (
         <p className="line-clamp-3 text-sm leading-relaxed text-muted-foreground">{repo.description}</p>
