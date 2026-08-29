@@ -15,7 +15,8 @@
     "sync:events": "node --experimental-strip-types scripts/sync-github-events.ts",
     "check:modules": "node --experimental-strip-types scripts/check-tested-modules.ts",
     "sync:trending": "node --experimental-strip-types scripts/sync-trending.ts",
-    "sync:pages": "node --experimental-strip-types scripts/sync-explore-pages.ts"
+    "sync:pages": "node --experimental-strip-types scripts/sync-explore-pages.ts",
+    "sync:llms": "node --experimental-strip-types scripts/sync-llms-txt.ts"
   },
   "engines": {
     "node": ">=24"
