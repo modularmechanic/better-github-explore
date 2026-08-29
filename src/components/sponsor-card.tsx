@@ -19,7 +19,7 @@ export function SponsorCard({ funding }: { funding: Funding }) {
   const { repo, githubLogins, external } = funding
   const [quickview, setQuickview] = useState(false)
   const { ref, inView } = useInView<HTMLDivElement>()
-  const { readme, loading } = useReadme(repo, inView)
+  const { readme, settled } = useReadme(repo, inView)
 
   return (
     <Card ref={ref} className="group flex flex-col gap-3 p-5 transition-colors hover:border-primary/40">
@@ -66,7 +66,7 @@ export function SponsorCard({ funding }: { funding: Funding }) {
         <span className="truncate">updated {timeAgo(repo.pushed_at)}</span>
       </div>
 
-      <RepoMedia media={readme?.media ?? null} loading={loading} className="h-36" />
+      <RepoMedia media={readme?.media ?? null} loading={!settled} className="h-36" />
 
       {repo.description && (
         <p className="line-clamp-2 text-base leading-relaxed text-muted-foreground">{repo.description}</p>

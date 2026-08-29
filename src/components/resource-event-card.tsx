@@ -28,19 +28,26 @@ export function ResourceEventCard({ event }: { event: ResourceEvent }) {
   const past = event.date ? new Date(event.date).getTime() < LOADED_AT : false
   const InPerson = event.type === 'In Person'
   const [loaded, setLoaded] = useState(false)
+  const [failed, setFailed] = useState(false)
 
   return (
     <Card className="group flex flex-col gap-0 overflow-hidden p-0 transition-colors hover:border-primary/40">
-      {event.image && (
+      {event.image && !failed && (
         // The banner is sized from the snapshot, so nothing moves when it
         // arrives — it only needs to stop appearing all at once. `bg-muted`
         // holds the space visibly and the picture fades over it on decode.
         // Left unwrapped on purpose: Card rounds a direct `img:first-child`.
+        //
+        // onError drops the banner rather than leaving it: the picture only
+        // becomes visible once `loaded` flips, so an image that 404s would
+        // otherwise sit there at opacity-0 forever — a blank 160px band with a
+        // border under the title, which reads as a broken card.
         <img
           src={`${event.image}?w=720&fm=webp`}
           alt=""
           loading="lazy"
           onLoad={() => setLoaded(true)}
+          onError={() => setFailed(true)}
           className={cn(
             'h-40 w-full border-b bg-muted object-cover transition duration-300 group-hover:scale-[1.02]',
             loaded ? 'opacity-100' : 'opacity-0',
