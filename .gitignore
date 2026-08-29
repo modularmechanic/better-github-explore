@@ -13,6 +13,12 @@ lerna-debug.log*
 .env.*
 !.env.example
 
+# Generated from the committed snapshots by `npm run sync:llms`, which the
+# build runs. The inputs are tracked, so the output need not be — and keeping
+# it in git churns ~106 kB every time the data cron fires.
+public/llms.txt
+public/sitemap.xml
+
 node_modules
 dist
 dist-ssr

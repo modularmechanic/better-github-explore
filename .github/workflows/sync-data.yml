@@ -56,8 +56,6 @@ jobs:
       - run: npm run sync:events
       - run: npm run sync:trending
       - run: npm run sync:pages
-      # Reads what the three scrapes just wrote; makes no requests of its own.
-      - run: npm run sync:llms
       # What a per-page assert cannot catch: a parser that still returns rows
       # but has lost the field everything else is keyed on. A snapshot full of
       # nameless repositories passes every count check and ships a broken tab.
