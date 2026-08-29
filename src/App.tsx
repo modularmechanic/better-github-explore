@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { AppHeader } from '@/components/app-header'
+import { ErrorBoundary } from '@/components/error-boundary'
 import { useAsync } from '@/hooks/use-async'
 import { tabAllowed, useHashRoute } from '@/hooks/use-hash-route'
 import { useToken } from '@/hooks/use-token'
@@ -37,6 +38,12 @@ export default function App() {
       <AppHeader tab={tab} search={search} onSearchChange={setSearch} />
 
       <main key={version} className="relative w-full px-3 py-5 sm:px-6">
+        {/*
+          Inside <main>, so a view that throws leaves the header and tab strip
+          standing and the reader can navigate out of it. The reset key is the
+          route, so moving to another tab clears a caught error.
+        */}
+        <ErrorBoundary key={`${tab}/${param ?? ''}`}>
         {tab === 'explore' && <ExploreView search={search} />}
         {tab === 'you' && <YouView search={search} />}
         {tab === 'trending' && <TrendingView search={search} />}
@@ -49,6 +56,7 @@ export default function App() {
           : <CollectionsView search={search} />)}
         {tab === 'events' && <EventsView search={search} />}
         {tab === 'sponsors' && <SponsorsView search={search} />}
+        </ErrorBoundary>
       </main>
 
       <footer className="w-full border-t px-3 py-6 text-xs text-on-glow sm:px-5">
