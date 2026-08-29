@@ -60,9 +60,24 @@ if (import.meta.url === pathToFileURL(process.argv[1] ?? '').href) {
 
   const repos = uniqueTrendingRepos()
 
-  // The snapshots are written in one run, so any of their timestamps names the
-  // same moment; trending's is the one the Trending tab shows.
-  const capturedAt = topicsPage.capturedAt ?? eventsFile.syncedAt ?? new Date().toISOString()
+  /*
+   * Trending's own timestamp, because trending is what the catalogue mostly is:
+   * 552 of its entries come from those snapshots and a few dozen from the other
+   * three files. Reading it from anywhere else describes a different scrape —
+   * harmless while one cron run writes all four within a couple of minutes, and
+   * quietly wrong the first time one of them fails and leaves its file behind at
+   * yesterday's date.
+   *
+   * No `new Date()` at the end of the chain. A missing timestamp means the
+   * snapshots are not what this script thinks they are, and stamping the file
+   * with the moment it happened to run would publish stale data under a fresh
+   * date — the one failure here nobody could see from the output.
+   */
+  const capturedAt: string | undefined =
+    readJson('public/data/trending/index.json').capturedAt
+    ?? topicsPage.capturedAt
+    ?? eventsFile.syncedAt
+  if (!capturedAt) throw new Error('no capturedAt in any snapshot — refusing to date llms.txt by guess')
 
   const llms = buildLlmsTxt({
     siteUrl: SITE_URL,
