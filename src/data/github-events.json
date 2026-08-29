@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-08-29T00:17:52.389Z",
+  "syncedAt": "2026-08-29T03:17:54.466Z",
   "events": [
     {
       "title": "Meet the GitHub Copilot App: Your AI-Powered Development",
@@ -86,6 +86,18 @@
       "availability": "Live"
     },
     {
+      "title": "Orchestrating Agentic Workflows: From Idea to Trusted Production",
+      "description": "Join us to see how autonomous GitHub agents build, test, and ship code through governed, multi‑step workflows. September 24, 11am-12pm PDT",
+      "url": "https://github.registration.goldcast.io/events/68b45c95-ca20-4e32-99d9-fb54a94f948c",
+      "cta": "Register here",
+      "date": "2026-09-24T00:00:00.000Z",
+      "image": "https://images.ctfassets.net/8aevphvgewt8/89rF0RtH38tLljGexqZvW/f7c37de3a68f26a7ff389c582d7fb66c/event-138-image",
+      "type": "Virtual",
+      "region": "AMER",
+      "topic": null,
+      "availability": "Live"
+    },
+    {
       "title": "Spend Smarter: Optimizing Copilot Tokens Without Slowing Builders",
       "description": "More AI usage shouldn't mean runaway costs or throttled developers. Online October 7, 2026 9am PT | 12pm ET",
       "url": "https://github.registration.goldcast.io/webinar/319dc29a-5c6d-4b09-afc3-22da968edfbb",
@@ -95,6 +107,18 @@
       "type": "Virtual",
       "region": "AMER",
       "topic": "AI",
+      "availability": "Live"
+    },
+    {
+      "title": "Trust What You Ship: Governance, Security & Code Quality in the Agentic Era",
+      "description": "Join us to explore how GitHub enforces trust, quality, security, and policy as AI drives autonomous code workflows. October 22, 11am-12pm PDT",
+      "url": "https://github.registration.goldcast.io/events/9aa57172-63e9-4381-bda6-22208875fb08",
+      "cta": "Register here",
+      "date": "2026-10-22T00:00:00.000Z",
+      "image": "https://images.ctfassets.net/8aevphvgewt8/CnWEG10yZrtvsAwihrGRG/9a46922bdc73e0903af08d2b8546fcde/event-139-image",
+      "type": "Virtual",
+      "region": "AMER",
+      "topic": null,
       "availability": "Live"
     },
     {
@@ -120,6 +144,18 @@
       "region": null,
       "topic": null,
       "availability": null
+    },
+    {
+      "title": "Measuring What Matters: Proving the ROI of AI-Powered Engineering",
+      "description": "Join us to quantify the impact of GitHub Copilot and agentic workflows so leaders measure real outcomes, not anecdotes. November 19, 11am-12pm PDT",
+      "url": "https://github.registration.goldcast.io/events/4b51851e-0da6-498b-99b7-d35b8a9f6d7e",
+      "cta": "Register here",
+      "date": "2026-11-19T00:00:00.000Z",
+      "image": "https://images.ctfassets.net/8aevphvgewt8/6cHtqTB5mW5S8oRpi90fqk/74ee9620f8e50655e6f6242e892e3f27/event-140-image",
+      "type": "Virtual",
+      "region": "AMER",
+      "topic": null,
+      "availability": "Live"
     },
     {
       "title": "GitHub Roadmap Webinar, Q2 2026",
@@ -168,6 +204,18 @@
       "region": null,
       "topic": null,
       "availability": "On demand"
+    },
+    {
+      "title": "Building for the Frontier Firm: What's Next for GitHub + AI",
+      "description": "Join us to explore the future of agentic development and how GitHub powers trusted, autonomous workflows. December 17, 11am-12pm PDT",
+      "url": "https://github.registration.goldcast.io/events/dfdf494e-ecfb-4a87-b8f4-554b3cd8bf3f",
+      "cta": "Register here",
+      "date": "2026-12-17T00:00:00.000Z",
+      "image": "https://images.ctfassets.net/8aevphvgewt8/2DvZD8mfEJWVKV9lt2NHlr/7f9d01b70cd7bf6b66b1f84fabec8484/event-141-image",
+      "type": "Virtual",
+      "region": "AMER",
+      "topic": null,
+      "availability": "Live"
     }
   ]
 }
