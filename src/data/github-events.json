@@ -1,30 +1,6 @@
 {
-  "syncedAt": "2026-08-26T16:33:15.731Z",
+  "syncedAt": "2026-08-29T00:17:52.389Z",
   "events": [
-    {
-      "title": "Code generation got fast. Shipping didn't. See the GitHub Copilot app in action.",
-      "description": "Ship more software, not just more code: How the GitHub Copilot app closes the loop from issue to merge. Online August 25, 2026 9am PT | 12pm ET",
-      "url": "https://github.registration.goldcast.io/webinar/b7e34c4a-6de0-4d63-853e-c0a25d0837f4?utm_source=GHEventsPage&utm_medium=Web&utm_campaign=AI_Aug25",
-      "cta": "Register now",
-      "date": "2026-08-25T00:00:00.000Z",
-      "image": "https://images.ctfassets.net/8aevphvgewt8/4NaL1p0sh6jKe8jyQaxtjE/0f75b55eb13970fea47c0e2b6b5408e6/event-120-image",
-      "type": "Virtual",
-      "region": "AMER",
-      "topic": "AI",
-      "availability": null
-    },
-    {
-      "title": "AI Code Hygiene: Keeping AI-Generated Code Secure",
-      "description": "Secure AI-Generated Code Without Slowing Development. Online August 26, 2026 9am PT | 12pm ET",
-      "url": "https://github.registration.goldcast.io/webinar/28f7dcb2-dcaf-450e-87ce-78c53c58b3f2",
-      "cta": "Register now",
-      "date": "2026-08-26T00:00:00.000Z",
-      "image": "https://images.ctfassets.net/8aevphvgewt8/40l6drJCrT153uZlbPpjur/07ffec5c2964cd834fd454bd4037c71d/event-112-image",
-      "type": "Virtual",
-      "region": "AMER",
-      "topic": "AI",
-      "availability": "Live"
-    },
     {
       "title": "Meet the GitHub Copilot App: Your AI-Powered Development",
       "description": "Join us to explore the latest GitHub Copilot updates and workflows driving real productivity gains. August 27, 11am-12pm PDT",
@@ -179,6 +155,18 @@
       "type": null,
       "region": null,
       "topic": "AI",
+      "availability": "On demand"
+    },
+    {
+      "title": "Code Generation Got Fast. Shipping Didn’t. See the GitHub Copilot app in action.",
+      "description": "Ship more software, not just more code: How the GitHub Copilot app closes the loop from issue to merge. On Demand",
+      "url": "https://github.registration.goldcast.io/webinar/b7e34c4a-6de0-4d63-853e-c0a25d0837f4",
+      "cta": "Watch now",
+      "date": "2026-12-03T00:00:00.000Z",
+      "image": "https://images.ctfassets.net/8aevphvgewt8/5nH5kpZbUBE2NncknQCNOS/2904e1532c7e4880881564c9c3dbf64b/event-137-image",
+      "type": null,
+      "region": null,
+      "topic": null,
       "availability": "On demand"
     }
   ]
