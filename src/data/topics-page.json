@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-08-30T03:19:35.143Z",
+  "capturedAt": "2026-08-30T06:19:31.760Z",
   "hero": {
     "title": "Topics",
     "blurb": "Browse popular topics on GitHub."
@@ -105,13 +105,13 @@
   "popular": [
     "react",
     "python",
-    "windows",
-    "macos",
     "typescript",
-    "ai",
-    "telegram",
-    "self-hosted",
-    "developer-tools",
-    "team-edu"
+    "micropython",
+    "postgresql",
+    "archived",
+    "historical",
+    "hddj",
+    "sley-legacy",
+    "sley-1"
   ]
 }
