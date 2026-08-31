@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-08-31T00:19:51.668Z",
+  "capturedAt": "2026-08-31T03:19:49.846Z",
   "hero": {
     "title": "Topics",
     "blurb": "Browse popular topics on GitHub."
@@ -103,15 +103,15 @@
     }
   ],
   "popular": [
-    "nodejs",
-    "javascript",
     "python",
-    "rust",
+    "windows",
+    "cli",
     "typescript",
-    "mcp",
-    "nextjs",
-    "ai-agents",
-    "geco-start",
-    "geco-platform"
+    "ai",
+    "healthcare",
+    "zero-dependency",
+    "fastapi",
+    "llm",
+    "ai-agent-skill"
   ]
 }
