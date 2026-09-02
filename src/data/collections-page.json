@@ -1,13 +1,13 @@
 {
-  "capturedAt": "2026-09-02T00:33:56.417Z",
+  "capturedAt": "2026-09-02T03:25:09.844Z",
   "hero": {
     "title": "Collections",
     "blurb": "Curated lists and insight into burgeoning industries, topics, and communities."
   },
   "order": [
+    "pixel-art-tools",
     "github-copilot-sdk-contest-winners",
     "learn-to-code",
-    "game-engines",
     "choosing-projects",
     "clean-code-linters",
     "open-journalism",
