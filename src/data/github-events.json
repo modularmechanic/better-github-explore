@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-09-02T12:30:35.273Z",
+  "syncedAt": "2026-09-02T15:28:56.292Z",
   "events": [
     {
       "title": "Meet the GitHub Copilot App: Your AI-Powered Development",
@@ -19,7 +19,7 @@
       "url": "https://github.registration.goldcast.io/webinar/ee84b400-2894-4c13-b8a7-f37359108ea6?utm_source=GHEventsPage&utm_medium=Web&utm_campaign=Sec_Sept29",
       "cta": "Register now",
       "date": "2026-08-29T00:00:00.000Z",
-      "image": "https://images.ctfassets.net/8aevphvgewt8/2PtARghYFiWdhgWV3LaZes/0fcc28fa756ebd4bb926d085361f0511/event-142-image",
+      "image": null,
       "type": "Virtual",
       "region": "AMER",
       "topic": "Security",
