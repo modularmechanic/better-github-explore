@@ -1,18 +1,6 @@
 {
-  "syncedAt": "2026-09-04T11:17:56.583Z",
+  "syncedAt": "2026-09-04T16:19:02.406Z",
   "events": [
-    {
-      "title": "Meet the GitHub Copilot App: Your AI-Powered Development",
-      "description": "Join us to explore the latest GitHub Copilot updates and workflows driving real productivity gains. August 27, 11am-12pm PDT",
-      "url": "https://github.registration.goldcast.io/events/e927d390-d2fb-4b24-bdb5-088650a784e5",
-      "cta": "Register now",
-      "date": "2026-08-27T00:00:00.000Z",
-      "image": "https://images.ctfassets.net/8aevphvgewt8/1JzWUXQMONPkUKQzppw6sF/9cf96d02e9105e39514216628f3f2361/event-131-image",
-      "type": "Virtual",
-      "region": "AMER",
-      "topic": null,
-      "availability": "Live"
-    },
     {
       "title": "How to Trust the Code You Ship",
       "description": "Learn how to find and fix issues, and trust your code. Online September 29, 2026 9am PT | 12pm ET",
