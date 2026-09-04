@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-09-04T04:33:45.861Z",
+  "capturedAt": "2026-09-04T11:19:38.163Z",
   "hero": {
     "title": "Topics",
     "blurb": "Browse popular topics on GitHub."
@@ -103,15 +103,15 @@
     }
   ],
   "popular": [
-    "nodejs",
-    "android",
+    "react",
     "python",
-    "cli",
+    "automation",
     "typescript",
     "ai",
     "mcp",
-    "developer-tools",
+    "postgresql",
     "ai-agents",
-    "claude-code"
+    "fastapi",
+    "ai-ml-web3-blockchain-cloud-computing-open-innovat"
   ]
 }
