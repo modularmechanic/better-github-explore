@@ -1,13 +1,13 @@
 {
-  "capturedAt": "2026-09-04T16:20:42.202Z",
+  "capturedAt": "2026-09-04T20:45:26.062Z",
   "hero": {
     "title": "Collections",
     "blurb": "Curated lists and insight into burgeoning industries, topics, and communities."
   },
   "order": [
-    "game-engines",
-    "pixel-art-tools",
+    "learn-to-code",
     "github-copilot-sdk-contest-winners",
+    "made-in-brazil",
     "choosing-projects",
     "clean-code-linters",
     "open-journalism",
@@ -20,7 +20,6 @@
     "github-pages-examples",
     "hacking-minecraft",
     "javascript-game-engines",
-    "learn-to-code",
     "machine-learning",
     "made-in-africa",
     "net-neutrality",
