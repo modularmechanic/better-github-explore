@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-09-05T10:31:24.220Z",
+  "syncedAt": "2026-09-05T15:10:24.720Z",
   "events": [
     {
       "title": "How to Trust the Code You Ship",
@@ -94,6 +94,18 @@
       "image": "https://images.ctfassets.net/8aevphvgewt8/89rF0RtH38tLljGexqZvW/f7c37de3a68f26a7ff389c582d7fb66c/event-138-image",
       "type": "Virtual",
       "region": "AMER",
+      "topic": null,
+      "availability": "Live"
+    },
+    {
+      "title": "GitHub Universe 2026 Ticket Giveaway",
+      "description": "Enter for a chance to win a free in-person ticket to GitHub Universe 2026.",
+      "url": "https://gh.io/win",
+      "cta": "Enter now",
+      "date": "2026-10-06T00:00:00.000Z",
+      "image": "https://images.ctfassets.net/8aevphvgewt8/15IabL0qSmYUmikEielYol/d29ac665182b9519c8ea20ceeee63958/event-148-image",
+      "type": "Virtual",
+      "region": null,
       "topic": null,
       "availability": "Live"
     },
