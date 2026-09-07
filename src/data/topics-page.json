@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-09-06T22:54:44.516Z",
+  "capturedAt": "2026-09-07T04:36:26.800Z",
   "hero": {
     "title": "Topics",
     "blurb": "Browse popular topics on GitHub."
@@ -104,14 +104,14 @@
   ],
   "popular": [
     "python",
-    "kubernetes",
-    "delphi",
-    "terraform",
-    "helm",
-    "platform-engineering",
-    "opentofu",
-    "pi-coding-agent",
-    "pi-extension",
-    "pi-package"
+    "portfolio",
+    "typescript",
+    "mathematics",
+    "ai-agents",
+    "llm",
+    "web-research",
+    "open-problem",
+    "vibe-mathing",
+    "candidate-only"
   ]
 }
