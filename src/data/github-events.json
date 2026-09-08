@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-09-08T04:30:36.460Z",
+  "syncedAt": "2026-09-08T11:13:09.423Z",
   "events": [
     {
       "title": "How to Trust the Code You Ship",
@@ -120,6 +120,18 @@
       "region": "AMER",
       "topic": "AI",
       "availability": "Live"
+    },
+    {
+      "title": "Tech After Dark Singapore",
+      "description": "An exclusive fun evening built for enterprise tech community to connect, explore and discover practical AI possibilities Oct 12 2026 | Singapore Expo",
+      "url": "https://github.registration.goldcast.io/events/c28a247c-29f6-4d7a-976c-a86b17d0b8ca?utm_source=github&utm_medium=site",
+      "cta": "Register",
+      "date": "2026-10-12T00:00:00.000Z",
+      "image": "https://images.ctfassets.net/8aevphvgewt8/jJ22S8wnpjKX07dWVR467/ce98211c2b155f2a06fd81e23bdefce5/event-151-image",
+      "type": "In Person",
+      "region": "APAC",
+      "topic": "AI",
+      "availability": null
     },
     {
       "title": "Trust What You Ship: Governance, Security & Code Quality in the Agentic Era",
