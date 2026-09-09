@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-09-09T16:37:19.175Z",
+  "capturedAt": "2026-09-09T20:55:47.216Z",
   "hero": {
     "title": "Topics",
     "blurb": "Browse popular topics on GitHub."
@@ -106,12 +106,12 @@
     "react",
     "javascript",
     "python",
+    "go",
+    "macos",
     "typescript",
-    "ai",
-    "ouro",
-    "p2p-networks",
-    "selo",
-    "agentic-ai",
-    "genpark-skill"
+    "linter",
+    "standards",
+    "developer-tools",
+    "ai-agents"
   ]
 }
