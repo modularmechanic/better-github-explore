@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-09-09T23:14:31.802Z",
+  "capturedAt": "2026-09-10T04:38:58.029Z",
   "hero": {
     "title": "Topics",
     "blurb": "Browse popular topics on GitHub."
@@ -103,15 +103,15 @@
     }
   ],
   "popular": [
-    "react",
-    "javascript",
     "python",
     "windows",
-    "cli",
     "typescript",
-    "tools",
+    "energy",
+    "sensor",
+    "power",
     "software",
-    "learning-project",
-    "bootstrap-e2e"
+    "solar",
+    "inverter",
+    "llm"
   ]
 }
