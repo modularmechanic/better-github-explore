@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-09-11T04:35:02.898Z",
+  "syncedAt": "2026-09-11T11:16:15.654Z",
   "events": [
     {
       "title": "Dev Days",
@@ -74,6 +74,18 @@
       "availability": "Live"
     },
     {
+      "title": "Controlling GitHub Copilot Spend",
+      "description": "Join Insight and GitHub and get practical guidance for making more informed AI investment decisions. Online September 29, 2026 | 12PM ET",
+      "url": "https://www.insight.com/en_US/content-and-resources/webinars/controlling-github-copilot-spend.html",
+      "cta": "Register",
+      "date": "2026-09-29T00:00:00.000Z",
+      "image": "https://images.ctfassets.net/8aevphvgewt8/6Lh1PYeSa22eR6BIUoJsgW/79ea5a1991507e1dd2550818b64f9899/event-161-image",
+      "type": "Virtual",
+      "region": null,
+      "topic": "AI",
+      "availability": "Live"
+    },
+    {
       "title": "GitHub Universe 2026 Ticket Giveaway",
       "description": "Enter for a chance to win a free in-person ticket to GitHub Universe 2026. San Francisco, CA October 28-29",
       "url": "https://gh.io/win",
@@ -83,6 +95,30 @@
       "type": "Virtual",
       "region": null,
       "topic": null,
+      "availability": "Live"
+    },
+    {
+      "title": "Master GitHub Copilot Usage-Based Billing",
+      "description": "Join Xebia and GitHub for a live webinar to learn more about GitHub Copilot's usage-based billing model. Online October 6 & 13, 2026 | 14:00 CEST",
+      "url": "https://events.xebia.com/master-github-usage-based-billing-oct-6",
+      "cta": "Register",
+      "date": "2026-10-06T00:00:00.000Z",
+      "image": "https://images.ctfassets.net/8aevphvgewt8/2TLvBI0WGIVJATwqSFx9ZW/1182ef54ee26c773f02489bdd6f36f25/event-158-image",
+      "type": "Virtual",
+      "region": null,
+      "topic": "AI",
+      "availability": "Live"
+    },
+    {
+      "title": "Optimize GitHub Copilot Token Costs & Boost Productivity",
+      "description": "Join Andela and GitHub for a webinar designed for technology and finance leaders managing AI coding costs. Online October 7, 2026 | 14:00 BST",
+      "url": "https://www.andela.com/webinar/optimize-github-copilot-token-costs/october",
+      "cta": "Register",
+      "date": "2026-10-07T00:00:00.000Z",
+      "image": "https://images.ctfassets.net/8aevphvgewt8/6It48lHNGEGPQJ5ehAAQps/98b95d5ec0941f07a3358a9f885e4193/event-160-image",
+      "type": "Virtual",
+      "region": null,
+      "topic": "AI",
       "availability": "Live"
     },
     {
@@ -108,6 +144,42 @@
       "region": "APAC",
       "topic": "AI",
       "availability": null
+    },
+    {
+      "title": "Master GitHub Copilot Usage-Based Billing",
+      "description": "Join Xebia and GitHub for a live webinar to learn more about GitHub Copilot's usage-based billing model. Online October 6 & 13, 2026 | 14:00 CEST",
+      "url": "https://events.xebia.com/master-github-usage-based-billing-oct-13",
+      "cta": "Register",
+      "date": "2026-10-13T00:00:00.000Z",
+      "image": "https://images.ctfassets.net/8aevphvgewt8/3CIWKiPkZhIMzBqdA0WQwo/0837fa631f03dfc210e0c0f11d20bf6b/event-159-image",
+      "type": "Virtual",
+      "region": null,
+      "topic": "AI",
+      "availability": null
+    },
+    {
+      "title": "Agent Quality, Optimized: Improving Outcomes While Managing Token Spend",
+      "description": "Join Slalom and GitHub and learn how to improve agent quality while managing token consumption and costs. Online October 20, 2026 | 11:00AM ET",
+      "url": "https://events.teams.microsoft.com/event/67a15b24-910a-4417-8b05-c0c388e51cc6@9ca75128-a244-4596-877b-f24828e476e2?source=copyLinkLegacyShareEventDialog",
+      "cta": "Register",
+      "date": "2026-10-20T00:00:00.000Z",
+      "image": "https://images.ctfassets.net/8aevphvgewt8/4yrqZepbZiyUqzwrMcYvaI/ad4d1a66d85be71e4c12cea4a633e210/event-162-image",
+      "type": "Virtual",
+      "region": null,
+      "topic": "AI",
+      "availability": "Live"
+    },
+    {
+      "title": "Agent Quality, Optimized: Improving Outcomes While Managing Token Spend",
+      "description": "Join Slalom and GitHub and learn how to improve agent quality while managing token consumption and costs. Online October 21, 2026 | 11:00AM BST",
+      "url": "https://events.teams.microsoft.com/event/474970f0-e74e-4c86-b8f1-7564a629b055@9ca75128-a244-4596-877b-f24828e476e2?source=copyLinkLegacyShareLinkDialog",
+      "cta": "Register",
+      "date": "2026-10-21T00:00:00.000Z",
+      "image": "https://images.ctfassets.net/8aevphvgewt8/5RsbYVBNiXOeRrOUgKnzlx/287c681c45fe726bc6603036b57f34f4/event-163-image",
+      "type": "Virtual",
+      "region": null,
+      "topic": "AI",
+      "availability": "Live"
     },
     {
       "title": "Trust What You Ship: Governance, Security & Code Quality in the Agentic Era",
