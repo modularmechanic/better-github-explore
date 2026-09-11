@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-09-11T11:16:15.654Z",
+  "syncedAt": "2026-09-11T16:25:46.448Z",
   "events": [
     {
       "title": "Dev Days",
@@ -24,18 +24,6 @@
       "region": "APAC",
       "topic": "AI",
       "availability": null
-    },
-    {
-      "title": "Copilot 101: From Idea to Outcome for Every Builder",
-      "description": "Getting Started with GitHub Copilot. Online September 9, 2026 9am PT | 12pm ET",
-      "url": "https://github.registration.goldcast.io/webinar/a936dd77-2e2e-4ed2-991b-94439d6e9628",
-      "cta": "Register now",
-      "date": "2026-09-09T00:00:00.000Z",
-      "image": "https://images.ctfassets.net/8aevphvgewt8/5OH1GITJZjfQSpMlR4etZN/cc30e1590eb29ae1ec9db33fc9b18892/event-113-image",
-      "type": "Virtual",
-      "region": "AMER",
-      "topic": "AI",
-      "availability": "Live"
     },
     {
       "title": "GitHub Connect Wellington",
@@ -86,6 +74,18 @@
       "availability": "Live"
     },
     {
+      "title": "How to Trust the Code You Ship",
+      "description": "Learn how to find and fix issues, and trust your code. Online September 29, 2026 9am PT| 12pm ET",
+      "url": "https://github.registration.goldcast.io/webinar/ee84b400-2894-4c13-b8a7-f37359108ea6?utm_source=GHEventsPage&utm_medium=Web&utm_campaign=Sec_Sept29",
+      "cta": "Register now",
+      "date": "2026-09-29T00:00:00.000Z",
+      "image": "https://images.ctfassets.net/8aevphvgewt8/4Y7vaPt5rLUzYi2wIugmTQ/cb782af8876df4f93658de87bd217522/event-165-image",
+      "type": "Virtual",
+      "region": "AMER",
+      "topic": "Security",
+      "availability": null
+    },
+    {
       "title": "GitHub Universe 2026 Ticket Giveaway",
       "description": "Enter for a chance to win a free in-person ticket to GitHub Universe 2026. San Francisco, CA October 28-29",
       "url": "https://gh.io/win",
@@ -134,6 +134,18 @@
       "availability": "Live"
     },
     {
+      "title": "Understanding Budgets for Usage Based Billing",
+      "description": "Join Canarys and GitHub for a live webinar and learn more about GitHub AI Credits and budgeting. Online October 12, 2026 | 11:30AM IST",
+      "url": "https://canaryswebinar.ecanarys.com/",
+      "cta": "Register Now",
+      "date": "2026-10-12T00:00:00.000Z",
+      "image": "https://images.ctfassets.net/8aevphvgewt8/5N3o1nCYTf1Ei77vjKYlZN/6bc55c4652562493e3ce1f33ae8d10a4/event-164-image",
+      "type": "Virtual",
+      "region": null,
+      "topic": "AI",
+      "availability": "Live"
+    },
+    {
       "title": "Tech After Dark Singapore",
       "description": "An exclusive fun evening built for enterprise tech community to connect, explore and discover practical AI possibilities Oct 12, 2026 Singapore Expo",
       "url": "https://github.registration.goldcast.io/events/c28a247c-29f6-4d7a-976c-a86b17d0b8ca?utm_source=github&utm_medium=site",
@@ -164,18 +176,6 @@
       "cta": "Register",
       "date": "2026-10-20T00:00:00.000Z",
       "image": "https://images.ctfassets.net/8aevphvgewt8/4yrqZepbZiyUqzwrMcYvaI/ad4d1a66d85be71e4c12cea4a633e210/event-162-image",
-      "type": "Virtual",
-      "region": null,
-      "topic": "AI",
-      "availability": "Live"
-    },
-    {
-      "title": "Agent Quality, Optimized: Improving Outcomes While Managing Token Spend",
-      "description": "Join Slalom and GitHub and learn how to improve agent quality while managing token consumption and costs. Online October 21, 2026 | 11:00AM BST",
-      "url": "https://events.teams.microsoft.com/event/474970f0-e74e-4c86-b8f1-7564a629b055@9ca75128-a244-4596-877b-f24828e476e2?source=copyLinkLegacyShareLinkDialog",
-      "cta": "Register",
-      "date": "2026-10-21T00:00:00.000Z",
-      "image": "https://images.ctfassets.net/8aevphvgewt8/5RsbYVBNiXOeRrOUgKnzlx/287c681c45fe726bc6603036b57f34f4/event-163-image",
       "type": "Virtual",
       "region": null,
       "topic": "AI",
