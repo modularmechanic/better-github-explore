@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-09-15T04:50:32.610Z",
+  "syncedAt": "2026-09-15T11:40:17.707Z",
   "events": [
     {
       "title": "Dev Days",
@@ -164,6 +164,18 @@
       "cta": "Register",
       "date": "2026-10-13T00:00:00.000Z",
       "image": "https://images.ctfassets.net/8aevphvgewt8/3CIWKiPkZhIMzBqdA0WQwo/0837fa631f03dfc210e0c0f11d20bf6b/event-159-image",
+      "type": "Virtual",
+      "region": null,
+      "topic": "AI",
+      "availability": null
+    },
+    {
+      "title": "Agent Quality, Optimized: Improving Outcomes While Managing Token Spend",
+      "description": "Join Slalom and GitHub and learn how to improve agent quality while managing token consumption and costs. Online October 14, 2026 | 11AM BST",
+      "url": "https://events.teams.microsoft.com/event/474970f0-e74e-4c86-b8f1-7564a629b055@9ca75128-a244-4596-877b-f24828e476e2?source=copyLinkLegacyShareLinkDialog",
+      "cta": "Register Now",
+      "date": "2026-10-14T00:00:00.000Z",
+      "image": "https://images.ctfassets.net/8aevphvgewt8/5HeQG2iUiMptDP6yTo7sWx/9e068b48ae1628910d5c004de1bb525a/event-166-image",
       "type": "Virtual",
       "region": null,
       "topic": "AI",
