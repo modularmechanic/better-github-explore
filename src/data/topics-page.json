@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-09-16T21:16:52.257Z",
+  "capturedAt": "2026-09-16T23:40:36.894Z",
   "hero": {
     "title": "Topics",
     "blurb": "Browse popular topics on GitHub."
@@ -104,14 +104,14 @@
   ],
   "popular": [
     "python",
+    "portfolio",
     "typescript",
-    "deep-learning",
+    "ai",
     "mcp",
-    "teaching",
+    "postgresql",
     "ai-agents",
-    "llm",
     "model-context-protocol",
     "mcp-server",
-    "claude-code"
+    "pipeworx"
   ]
 }
