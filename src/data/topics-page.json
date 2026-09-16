@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-09-15T16:57:21.613Z",
+  "capturedAt": "2026-09-16T04:47:16.052Z",
   "hero": {
     "title": "Topics",
     "blurb": "Browse popular topics on GitHub."
@@ -103,15 +103,15 @@
     }
   ],
   "popular": [
+    "react",
     "python",
-    "windows",
-    "typescript",
-    "ai",
-    "nextjs",
-    "quantitative-finance",
-    "voice-assistant",
-    "mavis",
-    "llm",
-    "mavis-ai"
+    "bitcoin",
+    "mcp",
+    "ed25519",
+    "measurement",
+    "gspc",
+    "ai-governance",
+    "csoai",
+    "uk-16939677"
   ]
 }
