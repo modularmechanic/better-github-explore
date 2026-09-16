@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-09-16T11:27:19.969Z",
+  "syncedAt": "2026-09-16T16:50:36.995Z",
   "events": [
     {
       "title": "Dev Days",
@@ -36,6 +36,18 @@
       "region": "APAC",
       "topic": "AI",
       "availability": null
+    },
+    {
+      "title": "Gerar código ficou rápido. Entregar, não.",
+      "description": "Junte-se a nós para descobrir como o GitHub Copilot conecta issue e merge com IA. Sep 22, 12:00 PM - 1:00 PM -03:00 (America/Sao_Paulo)",
+      "url": "https://github.registration.goldcast.io/webinar/c0874227-10ee-420c-bd07-c33b2731d11e",
+      "cta": "Registre-se agora",
+      "date": "2026-09-22T00:00:00.000Z",
+      "image": "https://images.ctfassets.net/8aevphvgewt8/6kVzMiJ3wj7XMdt9dw7zhZ/b9451a3218e98acbd4ab2906a49c0830/event-170-image",
+      "type": "Virtual",
+      "region": "AMER",
+      "topic": "AI",
+      "availability": "Live"
     },
     {
       "title": "Copilot 201: Engineering Workflows with CLI, Agents, and MCP",
@@ -84,6 +96,18 @@
       "region": "AMER",
       "topic": "Security",
       "availability": null
+    },
+    {
+      "title": "La generación de código se volvió rápida. Llevarlo a producción no.",
+      "description": "AAcompáñanos para descubrir cómo GitHub Copilot ayuda a entregar más software. Sep 30, 1:00 PM - 2:00 PM CDT (America/Chicago)",
+      "url": "https://github.registration.goldcast.io/webinar/12ffdaf5-a61e-4697-957b-295d2a02a445",
+      "cta": "Inscríbete ahora",
+      "date": "2026-09-30T00:00:00.000Z",
+      "image": "https://images.ctfassets.net/8aevphvgewt8/2FZ0l1ZhvgZ7lyyDaOVx72/bf268a248cae8d98979a37b707531a65/event-171-image",
+      "type": "Virtual",
+      "region": "AMER",
+      "topic": "AI",
+      "availability": "Live"
     },
     {
       "title": "GitHub Universe 2026 Ticket Giveaway",
