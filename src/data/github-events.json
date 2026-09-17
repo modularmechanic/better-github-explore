@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-09-17T16:57:16.471Z",
+  "syncedAt": "2026-09-17T21:18:59.056Z",
   "events": [
     {
       "title": "Dev Days",
@@ -36,6 +36,18 @@
       "region": "APAC",
       "topic": "AI",
       "availability": null
+    },
+    {
+      "title": "Let's Learn GitHub Copilot SDK",
+      "description": "New to the GitHub Copilot SDK? Join us live to learn how to build agentic apps. Streaming in multiple languages! Online September 24, 9am PT",
+      "url": "https://gh.io/letslearn",
+      "cta": "Register",
+      "date": "2026-09-17T00:00:00.000Z",
+      "image": "https://images.ctfassets.net/8aevphvgewt8/65xylXm3UrI3W73pbqxa82/2c40a17376f9e7dc99aa04fbed8c2da5/event-150-image",
+      "type": "Virtual",
+      "region": "AMER",
+      "topic": "AI",
+      "availability": "Live"
     },
     {
       "title": "Gerar código ficou rápido. Entregar, não.",
