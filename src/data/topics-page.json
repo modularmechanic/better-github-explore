@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-09-18T23:18:16.355Z",
+  "capturedAt": "2026-09-19T04:35:13.047Z",
   "hero": {
     "title": "Topics",
     "blurb": "Browse popular topics on GitHub."
@@ -103,15 +103,15 @@
     }
   ],
   "popular": [
-    "javascript",
+    "react",
     "python",
-    "cli",
+    "rust",
     "typescript",
     "ai",
-    "smart-contracts",
-    "developer-tools",
-    "web3",
     "ai-agents",
-    "tailwindcss"
+    "llm",
+    "sovereign-ai",
+    "modular-max",
+    "srcl-1-0"
   ]
 }
