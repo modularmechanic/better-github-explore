@@ -1,12 +1,12 @@
 {
-  "capturedAt": "2026-09-19T10:55:42.810Z",
+  "capturedAt": "2026-09-19T15:52:16.411Z",
   "hero": {
     "title": "Collections",
     "blurb": "Curated lists and insight into burgeoning industries, topics, and communities."
   },
   "order": [
-    "made-in-brazil",
     "game-engines",
+    "made-in-brazil",
     "pixel-art-tools",
     "choosing-projects",
     "clean-code-linters",
