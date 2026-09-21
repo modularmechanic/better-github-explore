@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-09-21T04:52:30.042Z",
+  "capturedAt": "2026-09-21T12:44:22.530Z",
   "hero": {
     "title": "Topics",
     "blurb": "Browse popular topics on GitHub."
@@ -103,15 +103,15 @@
     }
   ],
   "popular": [
-    "react",
-    "python",
-    "java",
-    "windows",
-    "rust",
-    "cli",
-    "mcp",
-    "ai-agents",
-    "learning-demo",
-    "llm"
+    "review",
+    "comparison",
+    "shopware",
+    "shopware-plugin",
+    "shopware-plugins",
+    "alternatives",
+    "shopware6",
+    "shopware-platform-plugin",
+    "shopware-platform",
+    "wows-mod"
   ]
 }
