@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-09-21T19:59:14.340Z",
+  "syncedAt": "2026-09-22T00:04:19.598Z",
   "events": [
     {
       "title": "Dev Days",
@@ -12,42 +12,6 @@
       "region": null,
       "topic": "AI",
       "availability": null
-    },
-    {
-      "title": "GitHub Connect Auckland",
-      "description": "Join us to discover the latest from GitHub, featuring expert sessions and a hands-on workshop. Auckland, New Zealand September 8, 2026 8:30 am NZST",
-      "url": "https://github.registration.goldcast.io/events/9b080b41-e30c-4623-bd1b-d572fed29283?utm_medium=website&utm_source=github&utm_campaign=701hR000006TsWHQA0",
-      "cta": "Register now",
-      "date": "2026-09-08T00:00:00.000Z",
-      "image": "https://images.ctfassets.net/8aevphvgewt8/4F9c1xIdc66CXhbyd1h8M2/020e98c9bf8f73ebfa399ff2ed9e30cd/event-123-image",
-      "type": "In Person",
-      "region": "APAC",
-      "topic": "AI",
-      "availability": null
-    },
-    {
-      "title": "GitHub Connect Wellington",
-      "description": "Join us to discover the latest from GitHub, featuring expert sessions and a hands-on workshop. Wellington New Zealand September 10, 2026 8:30 am NZST",
-      "url": "https://github.registration.goldcast.io/events/27904d30-464f-4f97-91e1-b4f178cb5b64?utm_medium=website&utm_source=github",
-      "cta": "Register now",
-      "date": "2026-09-10T00:00:00.000Z",
-      "image": "https://images.ctfassets.net/8aevphvgewt8/77R0bHmdrtYjvJAW5XoXgG/720ede1159ffeba103dc4a7e3e3474cd/event-124-image",
-      "type": "In Person",
-      "region": "APAC",
-      "topic": "AI",
-      "availability": null
-    },
-    {
-      "title": "Let's Learn GitHub Copilot SDK",
-      "description": "New to the GitHub Copilot SDK? Join us live to learn how to build agentic apps. Streaming in multiple languages! Online September 24, 9am PT",
-      "url": "https://gh.io/letslearn",
-      "cta": "Register",
-      "date": "2026-09-17T00:00:00.000Z",
-      "image": "https://images.ctfassets.net/8aevphvgewt8/65xylXm3UrI3W73pbqxa82/2c40a17376f9e7dc99aa04fbed8c2da5/event-150-image",
-      "type": "Virtual",
-      "region": "AMER",
-      "topic": "AI",
-      "availability": "Live"
     },
     {
       "title": "Gerar código ficou rápido. Entregar, não.",
