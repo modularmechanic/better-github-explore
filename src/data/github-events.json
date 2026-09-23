@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-09-23T11:30:12.629Z",
+  "syncedAt": "2026-09-23T16:53:51.996Z",
   "events": [
     {
       "title": "Dev Days",
@@ -12,18 +12,6 @@
       "region": null,
       "topic": "AI",
       "availability": null
-    },
-    {
-      "title": "Gerar código ficou rápido. Entregar, não.",
-      "description": "Junte-se a nós para descobrir como o GitHub Copilot conecta issue e merge com IA. Sep 22, 12:00 PM - 1:00 PM -03:00 (America/Sao_Paulo)",
-      "url": "https://github.registration.goldcast.io/webinar/c0874227-10ee-420c-bd07-c33b2731d11e",
-      "cta": "Registre-se agora",
-      "date": "2026-09-22T00:00:00.000Z",
-      "image": "https://images.ctfassets.net/8aevphvgewt8/6kVzMiJ3wj7XMdt9dw7zhZ/b9451a3218e98acbd4ab2906a49c0830/event-170-image",
-      "type": "Virtual",
-      "region": "AMER",
-      "topic": "AI",
-      "availability": "Live"
     },
     {
       "title": "Copilot 201: Engineering Workflows with CLI, Agents, and MCP",
