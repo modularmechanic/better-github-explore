@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-09-23T21:28:03.802Z",
+  "syncedAt": "2026-09-24T04:44:26.805Z",
   "events": [
     {
       "title": "Dev Days",
@@ -12,18 +12,6 @@
       "region": null,
       "topic": "AI",
       "availability": null
-    },
-    {
-      "title": "Copilot 201: Engineering Workflows with CLI, Agents, and MCP",
-      "description": "Ready to go from one-off prompts to repeatable, end-to-end workflows? Online September 23, 2026 9am PT | 12pm ET",
-      "url": "https://github.registration.goldcast.io/webinar/68ae5cc5-0c79-4da6-8c1b-2b1f709c4a58",
-      "cta": "Register now",
-      "date": "2026-09-23T00:00:00.000Z",
-      "image": "https://images.ctfassets.net/8aevphvgewt8/3vyOvUDjsq0v0A0j60wx7H/1971aee76f71866fbacb7f6edb621870/event-114-image",
-      "type": "Virtual",
-      "region": "AMER",
-      "topic": "AI",
-      "availability": "Live"
     },
     {
       "title": "Orchestrating Agentic Workflows: From Idea to Trusted Production",
