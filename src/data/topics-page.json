@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-09-24T04:46:01.955Z",
+  "capturedAt": "2026-09-24T11:42:56.191Z",
   "hero": {
     "title": "Topics",
     "blurb": "Browse popular topics on GitHub."
@@ -103,15 +103,15 @@
     }
   ],
   "popular": [
+    "javascript",
     "python",
-    "puzzle",
-    "arcade",
-    "shooter",
-    "party",
-    "strategy",
-    "adventure",
-    "action",
-    "survival",
-    "casual"
+    "typescript",
+    "ai",
+    "apimaster",
+    "ai-agents",
+    "fastapi",
+    "llm",
+    "openai-compatible",
+    "claude-code"
   ]
 }
