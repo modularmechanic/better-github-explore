@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-09-24T11:42:56.191Z",
+  "capturedAt": "2026-09-24T17:08:43.472Z",
   "hero": {
     "title": "Topics",
     "blurb": "Browse popular topics on GitHub."
@@ -103,15 +103,15 @@
     }
   ],
   "popular": [
+    "react",
     "javascript",
     "python",
     "typescript",
-    "ai",
-    "apimaster",
-    "ai-agents",
-    "fastapi",
-    "llm",
+    "pay-as-you-go",
     "openai-compatible",
-    "claude-code"
+    "openrouter-alternative",
+    "llm-api-gateway",
+    "per-image-pricing",
+    "cheapest-llm-api"
   ]
 }
