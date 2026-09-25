@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-09-25T17:09:08.037Z",
+  "capturedAt": "2026-09-25T21:33:59.577Z",
   "hero": {
     "title": "Topics",
     "blurb": "Browse popular topics on GitHub."
@@ -103,15 +103,15 @@
     }
   ],
   "popular": [
-    "react",
     "python",
     "windows",
-    "docker",
-    "automation",
     "typescript",
-    "postgresql",
-    "github-actions",
-    "fastapi",
-    "llm"
+    "web",
+    "server",
+    "mmo",
+    "jeu",
+    "openjev-port-pending",
+    "workspace-ads",
+    "workspace-embarcatech"
   ]
 }
