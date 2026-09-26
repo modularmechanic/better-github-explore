@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-09-26T21:07:54.047Z",
+  "capturedAt": "2026-09-26T23:37:36.183Z",
   "hero": {
     "title": "Topics",
     "blurb": "Browse popular topics on GitHub."
@@ -104,14 +104,14 @@
   ],
   "popular": [
     "react",
+    "game",
     "python",
     "windows",
     "typescript",
-    "mcp",
-    "developer-tools",
-    "ai-agents",
-    "fastapi",
-    "streamlit",
-    "selection-rules-all"
+    "gaming",
+    "multiplayer",
+    "pc",
+    "co-op",
+    "offline-game"
   ]
 }
