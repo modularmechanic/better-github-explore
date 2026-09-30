@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-09-30T12:29:27.512Z",
+  "syncedAt": "2026-09-30T19:59:35.102Z",
   "events": [
     {
       "title": "Dev Days",
@@ -23,18 +23,6 @@
       "type": "Virtual",
       "region": "AMER",
       "topic": null,
-      "availability": "Live"
-    },
-    {
-      "title": "Controlling GitHub Copilot Spend",
-      "description": "Join Insight and GitHub and get practical guidance for making more informed AI investment decisions. Online September 29, 2026 | 12PM ET",
-      "url": "https://www.insight.com/en_US/content-and-resources/webinars/controlling-github-copilot-spend.html",
-      "cta": "Register",
-      "date": "2026-09-29T00:00:00.000Z",
-      "image": "https://images.ctfassets.net/8aevphvgewt8/6Lh1PYeSa22eR6BIUoJsgW/79ea5a1991507e1dd2550818b64f9899/event-161-image",
-      "type": "Virtual",
-      "region": null,
-      "topic": "AI",
       "availability": "Live"
     },
     {
@@ -302,6 +290,18 @@
       "availability": "Live"
     },
     {
+      "title": "What Shipped at GitHub Universe: Put it to Work",
+      "description": "What's New and What's Next Online November 4, 2026 9am PST| 12pm EST",
+      "url": "https://github.registration.goldcast.io/webinar/de7c0ec8-6715-43f2-9489-486e95b5566a",
+      "cta": "Register now",
+      "date": "2026-11-04T00:00:00.000Z",
+      "image": "https://images.ctfassets.net/8aevphvgewt8/5BJkqT5I0zvstH8wrEJXFb/1e0890a6c50e305a1b2a44ff7444099b/event-219-image",
+      "type": "Virtual",
+      "region": "AMER",
+      "topic": "AI",
+      "availability": null
+    },
+    {
       "title": "GitHub Universe on the Road: Sydney",
       "description": "Experience the best of GitHub Universe with product insights, customer stories, and networking. Sydney, Australia November 17, 2026",
       "url": "https://github.registration.goldcast.io/events/66f7c1c9-2dfc-41f2-9924-37db52f9d8d5",
@@ -348,6 +348,18 @@
       "region": "AMER",
       "topic": null,
       "availability": "Live"
+    },
+    {
+      "title": "AI Code Hygiene: Deslopification",
+      "description": "Catch it early, fix it automatically, and merge with confidence. Online November 21, 2026 | 9am PST| 12pm EST",
+      "url": "https://github.registration.goldcast.io/webinar/4e7ed375-4217-42ea-8421-439d25bdf161",
+      "cta": "Register now",
+      "date": "2026-11-21T00:00:00.000Z",
+      "image": "https://images.ctfassets.net/8aevphvgewt8/2MEM7JdItIv39AGP42sbtq/202bd692209e8aabf2e36603895ed668/event-220-image",
+      "type": "Virtual",
+      "region": "AMER",
+      "topic": "AI",
+      "availability": null
     },
     {
       "title": "GitHub Universe on the Road: Paris",

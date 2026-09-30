@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-09-30T12:31:14.971Z",
+  "capturedAt": "2026-09-30T20:01:32.604Z",
   "hero": {
     "title": "Topics",
     "blurb": "Browse popular topics on GitHub."
@@ -103,15 +103,15 @@
     }
   ],
   "popular": [
-    "react",
-    "javascript",
     "python",
-    "java",
-    "macos",
-    "html",
-    "typescript",
     "csharp",
-    "artificial-intelligence",
-    "needs-classification"
+    "dotnet",
+    "nuget",
+    "benlab-sound",
+    "benlab-reference",
+    "benlab-docs",
+    "benlab-visual-spatial",
+    "benlab-sketch",
+    "benlab-project"
   ]
 }
