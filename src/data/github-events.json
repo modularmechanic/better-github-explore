@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-10-01T00:32:15.310Z",
+  "syncedAt": "2026-10-01T18:24:19.828Z",
   "events": [
     {
       "title": "Dev Days",
@@ -36,18 +36,6 @@
       "region": null,
       "topic": null,
       "availability": "On demand"
-    },
-    {
-      "title": "La generación de código se volvió rápida. Llevarlo a producción no.",
-      "description": "Acompáñanos a descubrir cómo GitHub Copilot ayuda a entregar más software. Sep 30, 1:00 PM - 2:00 PM CDT (America/Chicago)",
-      "url": "https://github.registration.goldcast.io/webinar/12ffdaf5-a61e-4697-957b-295d2a02a445",
-      "cta": "Inscríbete ahora",
-      "date": "2026-09-30T00:00:00.000Z",
-      "image": "https://images.ctfassets.net/8aevphvgewt8/16d9cudWRu2RmltLC8F4YB/aecf817012280f44df1b4d1a529e437d/event-171-image",
-      "type": "Virtual",
-      "region": "AMER",
-      "topic": "AI",
-      "availability": "Live"
     },
     {
       "title": "GitHub Universe 2026 Ticket Giveaway",
