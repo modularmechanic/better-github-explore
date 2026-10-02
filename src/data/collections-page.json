@@ -1,12 +1,12 @@
 {
-  "capturedAt": "2026-10-01T18:26:04.155Z",
+  "capturedAt": "2026-10-02T00:47:08.853Z",
   "hero": {
     "title": "Collections",
     "blurb": "Curated lists and insight into burgeoning industries, topics, and communities."
   },
   "order": [
+    "made-in-brazil",
     "learn-to-code",
-    "pixel-art-tools",
     "github-copilot-sdk-contest-winners",
     "choosing-projects",
     "clean-code-linters",
