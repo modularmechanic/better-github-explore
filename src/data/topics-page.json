@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-10-03T23:47:31.233Z",
+  "capturedAt": "2026-10-04T05:50:02.078Z",
   "hero": {
     "title": "Topics",
     "blurb": "Browse popular topics on GitHub."
@@ -105,13 +105,13 @@
   "popular": [
     "react",
     "python",
-    "windows",
-    "portfolio",
-    "automation",
     "typescript",
-    "mcp",
-    "bilingual",
-    "capp",
-    "capp-instrument"
+    "fastapi",
+    "ai-workflow-automation",
+    "automate-repetitive-tasks-with-ai",
+    "ai-tools-for-business-owners",
+    "business-automation-services",
+    "save-time-with-ai",
+    "ai-implementation-for-small-business"
   ]
 }
