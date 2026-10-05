@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-10-05T05:34:54.941Z",
+  "capturedAt": "2026-10-05T14:31:41.523Z",
   "hero": {
     "title": "Topics",
     "blurb": "Browse popular topics on GitHub."
@@ -106,12 +106,12 @@
     "react",
     "javascript",
     "python",
+    "java",
+    "docker",
+    "automation",
     "typescript",
-    "fork",
-    "mcp",
-    "nextjs",
-    "ai-agents",
-    "llm",
+    "spring-boot",
+    "postgresql",
     "claude-code"
   ]
 }
