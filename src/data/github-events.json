@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-10-06T06:15:22.793Z",
+  "syncedAt": "2026-10-06T13:18:45.478Z",
   "events": [
     {
       "title": "Dev Days",
@@ -122,12 +122,12 @@
       "availability": null
     },
     {
-      "title": "GitHub Copilot の従量課金を理解し、AI 活用を加速する",
+      "title": "Mastering GitHub Copilot Usage-Based Billing",
       "description": "Online October 13, 2026 | 10AM JST",
       "url": "https://peatix.com/event/5211026",
       "cta": "Register Now",
       "date": "2026-10-13T00:00:00.000Z",
-      "image": "https://images.ctfassets.net/8aevphvgewt8/5QcRR9iiWzptbbaiPiaz3c/d6ad90abc2b564181a215c1c170da08f/event-231-image",
+      "image": "https://images.ctfassets.net/8aevphvgewt8/5L6RFqJRaCYPzarzgSu1Mn/854452633ceac68fa48a1d7f4474b728/event-231-image",
       "type": "Virtual",
       "region": null,
       "topic": "AI",
