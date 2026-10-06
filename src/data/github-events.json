@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-10-05T14:29:55.697Z",
+  "syncedAt": "2026-10-06T06:15:22.793Z",
   "events": [
     {
       "title": "Dev Days",
@@ -24,18 +24,6 @@
       "region": "AMER",
       "topic": null,
       "availability": "Live"
-    },
-    {
-      "title": "How to Trust the Code You Ship",
-      "description": "Learn how to find and fix issues, and trust your code. On Demand",
-      "url": "https://github.registration.goldcast.io/webinar/ee84b400-2894-4c13-b8a7-f37359108ea6?utm_source=GHEventsPage&utm_medium=Web&utm_campaign=Sec_Sept29",
-      "cta": "Watch now",
-      "date": "2026-09-29T00:00:00.000Z",
-      "image": "https://images.ctfassets.net/8aevphvgewt8/2AZIvU08r08mCG8SWM2d2s/67fa7fba92f7b4c78b59cf16282358eb/event-165-image",
-      "type": null,
-      "region": null,
-      "topic": null,
-      "availability": "On demand"
     },
     {
       "title": "GitHub Universe 2026 Ticket Giveaway",
@@ -134,12 +122,36 @@
       "availability": null
     },
     {
+      "title": "GitHub Copilot の従量課金を理解し、AI 活用を加速する",
+      "description": "Online October 13, 2026 | 10AM JST",
+      "url": "https://peatix.com/event/5211026",
+      "cta": "Register Now",
+      "date": "2026-10-13T00:00:00.000Z",
+      "image": "https://images.ctfassets.net/8aevphvgewt8/5QcRR9iiWzptbbaiPiaz3c/d6ad90abc2b564181a215c1c170da08f/event-231-image",
+      "type": "Virtual",
+      "region": null,
+      "topic": "AI",
+      "availability": null
+    },
+    {
       "title": "Agent Quality, Optimized: Improving Outcomes While Managing Token Spend",
       "description": "Join Slalom and GitHub and learn how to improve agent quality while managing token consumption and costs. Online October 14, 2026 | 11AM BST",
       "url": "https://events.teams.microsoft.com/event/474970f0-e74e-4c86-b8f1-7564a629b055@9ca75128-a244-4596-877b-f24828e476e2?source=copyLinkLegacyShareLinkDialog",
       "cta": "Register Now",
       "date": "2026-10-14T00:00:00.000Z",
       "image": "https://images.ctfassets.net/8aevphvgewt8/5HeQG2iUiMptDP6yTo7sWx/9e068b48ae1628910d5c004de1bb525a/event-166-image",
+      "type": "Virtual",
+      "region": null,
+      "topic": "AI",
+      "availability": null
+    },
+    {
+      "title": "Understanding Budgets for UBB",
+      "description": "Join Insight and GitHub and learn budgeting practices for usage-based billing. Online October 14, 2026 | 12:00 PM AEDT",
+      "url": "https://au.insight.com/en_AU/content-and-resources/2026/ai-cost-management-and-optimisation-webinar-series.html?utm_campaign=WBN_261014_Q4_APAC_Github_Understanding-Budgets-for-UBB&utm_source=marketo&utm_medium=email&utm_content=image-hero",
+      "cta": "Register Now",
+      "date": "2026-10-14T00:00:00.000Z",
+      "image": "https://images.ctfassets.net/8aevphvgewt8/34v7vZMS9XZWJoPduTCYVt/6c33b6f06bf1c04e255472068c1dfa20/event-229-image",
       "type": "Virtual",
       "region": null,
       "topic": "AI",
@@ -190,6 +202,18 @@
       "image": "https://images.ctfassets.net/8aevphvgewt8/5THetVrXpvsvNKIlA8ndfB/c5dd7758190c41450a7bade299f5cd8e/event-217-image",
       "type": "Virtual",
       "region": "AMER",
+      "topic": "AI",
+      "availability": null
+    },
+    {
+      "title": "Agent Quality & Token Optimisation",
+      "description": "Join Insight and GitHub and learn how to improve AI agent quality. Online October 21, 2026 | 12PM AEDT",
+      "url": "https://au.insight.com/en_AU/content-and-resources/2026/ai-cost-management-and-optimisation-webinar-series.html?utm_campaign=WBN_261014_Q4_APAC_Github_Understanding-Budgets-for-UBB&utm_source=marketo&utm_medium=email&utm_content=image-hero",
+      "cta": "Register",
+      "date": "2026-10-21T00:00:00.000Z",
+      "image": "https://images.ctfassets.net/8aevphvgewt8/3YPeIi4zohiQFls2vtqDO0/1c2268e74836129e0dc04a7d4e7ccaff/event-230-image",
+      "type": "Virtual",
+      "region": null,
       "topic": "AI",
       "availability": null
     },
@@ -756,6 +780,18 @@
       "region": "APAC",
       "topic": "AI",
       "availability": "Live"
+    },
+    {
+      "title": "How to Trust the Code You Ship",
+      "description": "Learn how to find and fix issues, and trust your code. On Demand",
+      "url": "https://github.registration.goldcast.io/webinar/ee84b400-2894-4c13-b8a7-f37359108ea6?utm_source=GHEventsPage&utm_medium=Web&utm_campaign=Sec_Sept29",
+      "cta": "Watch now",
+      "date": "2027-09-22T00:00+00:00",
+      "image": "https://images.ctfassets.net/8aevphvgewt8/2AZIvU08r08mCG8SWM2d2s/67fa7fba92f7b4c78b59cf16282358eb/event-165-image",
+      "type": null,
+      "region": null,
+      "topic": null,
+      "availability": "On demand"
     },
     {
       "title": "GitHub Roadmap Webinar, Q2 2026",
