@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-10-07T10:12:58.463Z",
+  "capturedAt": "2026-10-07T18:56:56.057Z",
   "hero": {
     "title": "Topics",
     "blurb": "Browse popular topics on GitHub."
@@ -103,15 +103,15 @@
     }
   ],
   "popular": [
+    "react",
+    "javascript",
     "python",
-    "desktop-utility",
-    "windows-tools",
-    "disk-cleanup",
-    "hardware-monitor",
-    "admin-toolkit",
-    "fastapi",
-    "system-optimization",
-    "driver-update",
-    "registry-tools"
+    "java",
+    "docker",
+    "rust",
+    "typescript",
+    "postgresql",
+    "vite",
+    "llm"
   ]
 }
