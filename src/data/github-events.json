@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-10-08T10:29:33.138Z",
+  "syncedAt": "2026-10-09T18:20:02.770Z",
   "events": [
     {
       "title": "Dev Days",
@@ -58,18 +58,6 @@
       "image": "https://images.ctfassets.net/8aevphvgewt8/6It48lHNGEGPQJ5ehAAQps/98b95d5ec0941f07a3358a9f885e4193/event-160-image",
       "type": "Virtual",
       "region": null,
-      "topic": "AI",
-      "availability": "Live"
-    },
-    {
-      "title": "Spend Smarter: Optimizing Copilot Tokens Without Slowing Builders",
-      "description": "More AI usage shouldn't mean runaway costs or throttled developers. Online October 7, 2026 9am PT | 12pm ET",
-      "url": "https://github.registration.goldcast.io/webinar/319dc29a-5c6d-4b09-afc3-22da968edfbb",
-      "cta": "Register now",
-      "date": "2026-10-07T00:00:00.000Z",
-      "image": "https://images.ctfassets.net/8aevphvgewt8/5jdHJXej9d5K32Vg8rucIP/e5dc9cd60dd8b7763acd02e0d8e7551b/event-115-image",
-      "type": "Virtual",
-      "region": "AMER",
       "topic": "AI",
       "availability": "Live"
     },
