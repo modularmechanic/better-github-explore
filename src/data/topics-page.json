@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-10-09T18:21:43.238Z",
+  "capturedAt": "2026-10-10T00:48:50.650Z",
   "hero": {
     "title": "Topics",
     "blurb": "Browse popular topics on GitHub."
@@ -103,15 +103,15 @@
     }
   ],
   "popular": [
+    "react",
+    "javascript",
     "python",
-    "machine-learning",
+    "html",
+    "cli",
     "typescript",
-    "reverse-engineering",
-    "oci",
-    "recompilation",
-    "static-recompilation",
-    "byoa",
-    "pc-port",
-    "infra-datasource"
+    "game-demo",
+    "ai-agents",
+    "llm",
+    "claude-code"
   ]
 }
