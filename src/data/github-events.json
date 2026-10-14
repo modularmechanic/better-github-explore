@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-10-11T05:41:06.980Z",
+  "syncedAt": "2026-10-14T11:46:16.311Z",
   "events": [
     {
       "title": "Dev Days",
@@ -38,30 +38,6 @@
       "availability": "Live"
     },
     {
-      "title": "Understanding Budgets for Usage-Based Billing",
-      "description": "Join Xebia and GitHub for a live webinar to learn more about GitHub Copilot's usage-based billing model. Online October 6, 2026 | 14:00 CEST",
-      "url": "https://events.xebia.com/master-github-usage-based-billing-oct-6",
-      "cta": "Register",
-      "date": "2026-10-06T00:00:00.000Z",
-      "image": "https://images.ctfassets.net/8aevphvgewt8/5Z0SmpuCKCMZwfWlVKuOxa/51e67c5b94d26eeff8e98fa770e7e8c2/event-158-image",
-      "type": "Virtual",
-      "region": null,
-      "topic": "AI",
-      "availability": "Live"
-    },
-    {
-      "title": "Optimize GitHub Copilot Token Costs & Boost Productivity",
-      "description": "Join Andela and GitHub for a webinar designed for technology and finance leaders managing AI coding costs. Online October 7, 2026 | 14:00 BST",
-      "url": "https://www.andela.com/webinar/optimize-github-copilot-token-costs/october",
-      "cta": "Register",
-      "date": "2026-10-07T00:00:00.000Z",
-      "image": "https://images.ctfassets.net/8aevphvgewt8/6It48lHNGEGPQJ5ehAAQps/98b95d5ec0941f07a3358a9f885e4193/event-160-image",
-      "type": "Virtual",
-      "region": null,
-      "topic": "AI",
-      "availability": "Live"
-    },
-    {
       "title": "Microsoft AI Tour: Singapore",
       "description": "Explore the latest AI innovations, connect with experts, and learn through live sessions. Singapore, Singapore October 12, 2026",
       "url": "https://aitour.microsoft.com/flow/microsoft/singapore27/citylanding/page/cityhome",
@@ -72,54 +48,6 @@
       "region": "APAC",
       "topic": "AI",
       "availability": "Live"
-    },
-    {
-      "title": "Understanding Budgets for Usage Based Billing",
-      "description": "Join Canarys and GitHub for a live webinar and learn more about GitHub AI Credits and budgeting. Online October 12, 2026 | 11:30AM IST",
-      "url": "https://canaryswebinar.ecanarys.com/",
-      "cta": "Register Now",
-      "date": "2026-10-12T00:00:00.000Z",
-      "image": "https://images.ctfassets.net/8aevphvgewt8/5N3o1nCYTf1Ei77vjKYlZN/6bc55c4652562493e3ce1f33ae8d10a4/event-164-image",
-      "type": "Virtual",
-      "region": null,
-      "topic": "AI",
-      "availability": "Live"
-    },
-    {
-      "title": "Tech After Dark Singapore",
-      "description": "An exclusive fun evening built for enterprise tech community to connect, explore and discover practical AI possibilities Oct 12, 2026 Singapore Expo",
-      "url": "https://github.registration.goldcast.io/events/c28a247c-29f6-4d7a-976c-a86b17d0b8ca?utm_source=github&utm_medium=site",
-      "cta": "Register",
-      "date": "2026-10-12T00:00:00.000Z",
-      "image": "https://images.ctfassets.net/8aevphvgewt8/1BzDzNaCkbuT4sZoN1uGu9/df6b24223e46597d4a7afbc8d300337b/event-151-image",
-      "type": "In Person",
-      "region": "APAC",
-      "topic": "AI",
-      "availability": null
-    },
-    {
-      "title": "Agent Quality & AI Consumption Optimization",
-      "description": "Join Xebia and GitHub for a live webinar to learn more about agent quality and token optimisation. Online October 13, 2026 | 14:00 CEST",
-      "url": "https://events.xebia.com/master-github-usage-based-billing-oct-13",
-      "cta": "Register",
-      "date": "2026-10-13T00:00:00.000Z",
-      "image": "https://images.ctfassets.net/8aevphvgewt8/6YCU0MOs0OWkx8jJvg6v3M/355ceacd27bc61c03c59e1a57ba85cb0/event-159-image",
-      "type": "Virtual",
-      "region": null,
-      "topic": "AI",
-      "availability": null
-    },
-    {
-      "title": "Mastering GitHub Copilot Usage-Based Billing",
-      "description": "Online October 13, 2026 | 10AM JST",
-      "url": "https://peatix.com/event/5211026",
-      "cta": "Register Now",
-      "date": "2026-10-13T00:00:00.000Z",
-      "image": "https://images.ctfassets.net/8aevphvgewt8/5L6RFqJRaCYPzarzgSu1Mn/854452633ceac68fa48a1d7f4474b728/event-231-image",
-      "type": "Virtual",
-      "region": null,
-      "topic": "AI",
-      "availability": null
     },
     {
       "title": "Agent Quality, Optimized: Improving Outcomes While Managing Token Spend",
