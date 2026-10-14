@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-10-14T11:46:16.311Z",
+  "syncedAt": "2026-10-14T17:06:33.745Z",
   "events": [
     {
       "title": "Dev Days",
@@ -14,18 +14,6 @@
       "availability": null
     },
     {
-      "title": "Orchestrating Agentic Workflows: From Idea to Trusted Production",
-      "description": "Join us to see how autonomous GitHub agents build, test, and ship code through governed, multi‑step workflows. Online September 24, 11am-12pm PDT",
-      "url": "https://github.registration.goldcast.io/events/68b45c95-ca20-4e32-99d9-fb54a94f948c",
-      "cta": "Register here",
-      "date": "2026-09-24T00:00:00.000Z",
-      "image": "https://images.ctfassets.net/8aevphvgewt8/01j7GR4jUhXfYZaeUIlhpP/b891d01fa72aabd897b776abc04ede99/event-138-image",
-      "type": "Virtual",
-      "region": "AMER",
-      "topic": null,
-      "availability": "Live"
-    },
-    {
       "title": "GitHub Universe 2026 Ticket Giveaway",
       "description": "Enter for a chance to win a free in-person ticket to GitHub Universe 2026. San Francisco, CA October 28-29",
       "url": "https://gh.io/win",
@@ -35,18 +23,6 @@
       "type": "Virtual",
       "region": null,
       "topic": null,
-      "availability": "Live"
-    },
-    {
-      "title": "Microsoft AI Tour: Singapore",
-      "description": "Explore the latest AI innovations, connect with experts, and learn through live sessions. Singapore, Singapore October 12, 2026",
-      "url": "https://aitour.microsoft.com/flow/microsoft/singapore27/citylanding/page/cityhome",
-      "cta": "Explore more",
-      "date": "2026-10-12T00:00:00.000Z",
-      "image": "https://images.ctfassets.net/8aevphvgewt8/5qJ6bAqh6kPyMzGO2z3bVb/5d17565e1bc8b9ff56f140561bc08f80/event-183-image",
-      "type": "In Person",
-      "region": "APAC",
-      "topic": "AI",
       "availability": "Live"
     },
     {
