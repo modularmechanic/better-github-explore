@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-10-17T04:20:15.643Z",
+  "syncedAt": "2026-10-17T10:37:20.611Z",
   "events": [
     {
       "title": "Dev Days",
@@ -206,6 +206,30 @@
       "availability": null
     },
     {
+      "title": "Agentic Day: NYC",
+      "description": "Explore GitHub Universe updates with hands-on Copilot demos and agentic workflows. New York, NY November 9, 2026",
+      "url": "https://github.registration.goldcast.io/events/950184b8-647b-46cb-ab1f-b535d882374c",
+      "cta": "Register now",
+      "date": "2026-11-09T00:00:00.000Z",
+      "image": "https://images.ctfassets.net/8aevphvgewt8/2oxD0v1w5guRVJl18QWusN/55eb55286875c10f2f3a44b31fa47764/event-243-image",
+      "type": "In Person",
+      "region": "AMER",
+      "topic": "AI",
+      "availability": "Live"
+    },
+    {
+      "title": "GitHub Agentic Day: Chicago",
+      "description": "Explore GitHub Universe updates with hands-on Copilot demos and agentic workflows. Chicago, IL November 16, 2026",
+      "url": "https://github.registration.goldcast.io/events/54317cf0-c516-426d-a07d-7a17386d414f",
+      "cta": "Register now",
+      "date": "2026-11-16T00:00:00.000Z",
+      "image": "https://images.ctfassets.net/8aevphvgewt8/64xGf5Kf6ALcIvvPeMLX5x/62739205ec9e3e3774a2257af2e18d07/event-244-image",
+      "type": "In Person",
+      "region": "AMER",
+      "topic": "AI",
+      "availability": "Live"
+    },
+    {
       "title": "GitHub Universe on the Road: Sydney",
       "description": "Experience the best of GitHub Universe with product insights, customer stories, and networking. Sydney, Australia November 17, 2026",
       "url": "https://github.registration.goldcast.io/events/66f7c1c9-2dfc-41f2-9924-37db52f9d8d5",
@@ -236,6 +260,30 @@
       "cta": "Register",
       "date": "2026-11-18T00:00:00.000Z",
       "image": "https://images.ctfassets.net/8aevphvgewt8/2sRcUSoXJxVkd2JHcqjya9/3e8d3858fc476cf392309ccda3940ea9/event-176-image",
+      "type": "In Person",
+      "region": "AMER",
+      "topic": "AI",
+      "availability": "Live"
+    },
+    {
+      "title": "Agentic Day: Montréal",
+      "description": "Explore GitHub Universe updates with hands-on Copilot demos and agentic workflows. Montréal, QC November 19, 2026",
+      "url": "https://github.registration.goldcast.io/events/679f4f7c-9ef5-4c3d-888b-3599a57d872b",
+      "cta": "Register now",
+      "date": "2026-11-19T00:00:00.000Z",
+      "image": "https://images.ctfassets.net/8aevphvgewt8/6xzO38bNPjlLu05LemdWri/aa4e0df34b1beb68519abf729e15e959/event-246-image",
+      "type": "In Person",
+      "region": "AMER",
+      "topic": "AI",
+      "availability": "Live"
+    },
+    {
+      "title": "Agentic Day: Boston",
+      "description": "Explore GitHub Universe updates with hands-on Copilot demos and agentic workflows. Burlington, MA November 19, 2026",
+      "url": "https://github.registration.goldcast.io/events/3eff30af-1473-4e43-abc3-eba041a2b1da",
+      "cta": "Register now",
+      "date": "2026-11-19T00:00:00.000Z",
+      "image": "https://images.ctfassets.net/8aevphvgewt8/6uuwL8YOGhrcpDyAkNvqg9/f16cbbb4e571d307a5e27ac9f2b1f10a/event-245-image",
       "type": "In Person",
       "region": "AMER",
       "topic": "AI",
@@ -310,6 +358,18 @@
       "image": "https://images.ctfassets.net/8aevphvgewt8/5IN5uh3a9Vxv4fJcA8CxeW/8a2f60277cb6b3f6758e5d73f4571567/event-180-image",
       "type": "In Person",
       "region": "EMEA",
+      "topic": "AI",
+      "availability": "Live"
+    },
+    {
+      "title": "Agentic Day: Philadelphia",
+      "description": "Explore GitHub Universe updates with hands-on Copilot demos and agentic workflows. Malvern, PA December 8, 2026",
+      "url": "https://github.registration.goldcast.io/events/9977e35e-5b40-42c2-acf5-c3e522296b15",
+      "cta": "Register now",
+      "date": "2026-12-08T00:00:00.000Z",
+      "image": "https://images.ctfassets.net/8aevphvgewt8/6tZyRxTZWD7bF8mTKuUMlJ/b521f8ef92a44dadfd123a5d71586ae7/event-247-image",
+      "type": "In Person",
+      "region": "AMER",
       "topic": "AI",
       "availability": "Live"
     },
