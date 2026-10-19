@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-10-18T23:09:47.453Z",
+  "capturedAt": "2026-10-19T04:36:30.951Z",
   "hero": {
     "title": "Topics",
     "blurb": "Browse popular topics on GitHub."
@@ -103,15 +103,15 @@
     }
   ],
   "popular": [
-    "desktop-app",
-    "download",
-    "software",
-    "repair",
-    "fix",
-    "flutter",
-    "windows-app",
-    "troubleshooting",
-    "windows-11",
-    "utility-software"
+    "react",
+    "javascript",
+    "python",
+    "learning",
+    "firebase",
+    "django",
+    "typescript",
+    "algorithms",
+    "oop",
+    "kanon-e2e"
   ]
 }
