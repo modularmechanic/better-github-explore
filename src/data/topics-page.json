@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-10-21T04:41:53.501Z",
+  "capturedAt": "2026-10-21T11:44:15.346Z",
   "hero": {
     "title": "Topics",
     "blurb": "Browse popular topics on GitHub."
@@ -107,11 +107,11 @@
     "javascript",
     "python",
     "windows",
-    "cli",
-    "helper",
     "typescript",
+    "mcp",
+    "home-assistant",
     "ai-agents",
-    "fastapi",
-    "claude-code"
+    "llm",
+    "llm-evaluation"
   ]
 }
