@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-10-22T04:37:38.060Z",
+  "syncedAt": "2026-10-24T15:53:13.287Z",
   "events": [
     {
       "title": "Dev Days",
@@ -24,18 +24,6 @@
       "region": null,
       "topic": null,
       "availability": "Live"
-    },
-    {
-      "title": "GitHub Connect Tour",
-      "description": "Ready to build with us? Explore the GitHub Connect Tour agenda and join us in a city near you.",
-      "url": "https://github.com//resources/events/github-connect-tour",
-      "cta": "Register",
-      "date": "2026-10-15T00:00:00.000Z",
-      "image": "https://images.ctfassets.net/8aevphvgewt8/3SBk9d1ILZci3HWVGUL0ml/7e45d3a089cd617b5ac020000828ac07/event-241-image",
-      "type": "In Person",
-      "region": null,
-      "topic": null,
-      "availability": null
     },
     {
       "title": "Agent Quality, Optimized: Improving Outcomes While Managing Token Spend",
@@ -72,18 +60,6 @@
       "region": "EMEA",
       "topic": "AI",
       "availability": "Live"
-    },
-    {
-      "title": "GitHub Copilot for Every Builder",
-      "description": "From Idea to Delegated Issue Online October 21, 2026 9am PT| 12pm ET",
-      "url": "https://github.registration.goldcast.io/webinar/9682eea6-d3ae-4002-9730-684d0586912d?utm_source=GHEventsPage&utm_medium=Web&utm_campaign=DD_Oct21",
-      "cta": "Register now",
-      "date": "2026-10-21T00:00:00.000Z",
-      "image": "https://images.ctfassets.net/8aevphvgewt8/5THetVrXpvsvNKIlA8ndfB/c5dd7758190c41450a7bade299f5cd8e/event-217-image",
-      "type": "Virtual",
-      "region": "AMER",
-      "topic": "AI",
-      "availability": null
     },
     {
       "title": "Agent Quality & Token Optimisation",
@@ -288,6 +264,18 @@
       "region": "AMER",
       "topic": "AI",
       "availability": "Live"
+    },
+    {
+      "title": "GitHub Connect Tour",
+      "description": "Ready to build with us? Explore the GitHub Connect Tour agenda and join us in a city near you. In-person globally November - December",
+      "url": "https://github.com//resources/events/github-connect-tour",
+      "cta": "Register",
+      "date": "2026-11-19T00:00:00.000Z",
+      "image": "https://images.ctfassets.net/8aevphvgewt8/37dC8eyoxRCgKeQD1MPiij/ee0d2277f55440505a5c157b24b68d58/event-241-image",
+      "type": "In Person",
+      "region": null,
+      "topic": null,
+      "availability": null
     },
     {
       "title": "Measuring What Matters: Proving the ROI of AI-Powered Engineering",
