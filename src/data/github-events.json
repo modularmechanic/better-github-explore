@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-10-26T12:53:40.070Z",
+  "syncedAt": "2026-10-26T20:27:16.311Z",
   "events": [
     {
       "title": "Dev Days",
@@ -23,90 +23,6 @@
       "type": "Virtual",
       "region": null,
       "topic": null,
-      "availability": "Live"
-    },
-    {
-      "title": "Agent Quality, Optimized: Improving Outcomes While Managing Token Spend",
-      "description": "Join Slalom and GitHub and learn how to improve agent quality while managing token consumption and costs. Online October 20, 2026 | 11:00AM ET",
-      "url": "https://events.teams.microsoft.com/event/67a15b24-910a-4417-8b05-c0c388e51cc6@9ca75128-a244-4596-877b-f24828e476e2?source=copyLinkLegacyShareEventDialog",
-      "cta": "Register",
-      "date": "2026-10-20T00:00:00.000Z",
-      "image": "https://images.ctfassets.net/8aevphvgewt8/4yrqZepbZiyUqzwrMcYvaI/ad4d1a66d85be71e4c12cea4a633e210/event-162-image",
-      "type": "Virtual",
-      "region": null,
-      "topic": "AI",
-      "availability": "Live"
-    },
-    {
-      "title": "Microsoft AI Tour: Paris",
-      "description": "Explore the latest AI innovations, connect with experts, and learn through live sessions. Paris, France October 20, 2026",
-      "url": "https://aitour.microsoft.com/flow/microsoft/paris27/citylanding/page/cityhome",
-      "cta": "Explore more",
-      "date": "2026-10-20T00:00:00.000Z",
-      "image": "https://images.ctfassets.net/8aevphvgewt8/7iqxV7lFwn00Q7IpdAO8mk/d37477dc44959e419cc614c129b4a9d4/event-184-image",
-      "type": "In Person",
-      "region": "EMEA",
-      "topic": "AI",
-      "availability": "Live"
-    },
-    {
-      "title": "Microsoft AI Tour: London",
-      "description": "Explore the latest AI innovations, connect with experts, and learn through live sessions. London, United Kingdom October 21, 2026",
-      "url": "https://aitour.microsoft.com/flow/microsoft/london27/citylanding/page/cityhome",
-      "cta": "Explore more",
-      "date": "2026-10-21T00:00:00.000Z",
-      "image": "https://images.ctfassets.net/8aevphvgewt8/4WRgwTyNS2JmQfYHC3UwZL/654a339180b8626cbb93fe15bbcbbcd6/event-185-image",
-      "type": "In Person",
-      "region": "EMEA",
-      "topic": "AI",
-      "availability": "Live"
-    },
-    {
-      "title": "Agent Quality & Token Optimisation",
-      "description": "Join Insight and GitHub and learn how to improve AI agent quality. Online October 21, 2026 | 12PM AEDT",
-      "url": "https://au.insight.com/en_AU/content-and-resources/2026/ai-cost-management-and-optimisation-webinar-series.html?utm_campaign=WBN_261014_Q4_APAC_Github_Understanding-Budgets-for-UBB&utm_source=marketo&utm_medium=email&utm_content=image-hero",
-      "cta": "Register",
-      "date": "2026-10-21T00:00:00.000Z",
-      "image": "https://images.ctfassets.net/8aevphvgewt8/3YPeIi4zohiQFls2vtqDO0/1c2268e74836129e0dc04a7d4e7ccaff/event-230-image",
-      "type": "Virtual",
-      "region": null,
-      "topic": "AI",
-      "availability": null
-    },
-    {
-      "title": "Microsoft AI Tour: Philadelphia",
-      "description": "Explore the latest AI innovations, connect with experts, and learn through live sessions. Philadelphia, United States October 22, 2026",
-      "url": "https://aitour.microsoft.com/flow/microsoft/philadelphia27/citylanding/page/cityhome",
-      "cta": "Explore more",
-      "date": "2026-10-22T00:00:00.000Z",
-      "image": "https://images.ctfassets.net/8aevphvgewt8/3ATUr43JUJgUqhAmoDpfaw/612db853eb1f073cc6010fa8bf84fc8e/event-187-image",
-      "type": "In Person",
-      "region": "AMER",
-      "topic": "AI",
-      "availability": "Live"
-    },
-    {
-      "title": "Trust What You Ship: Governance, Security & Code Quality in the Agentic Era",
-      "description": "Join us to explore how GitHub enforces trust, quality, security, and policy as AI drives autonomous code workflows. Online October 22, 11am-12pm PDT",
-      "url": "https://github.registration.goldcast.io/events/9aa57172-63e9-4381-bda6-22208875fb08",
-      "cta": "Register here",
-      "date": "2026-10-22T00:00:00.000Z",
-      "image": "https://images.ctfassets.net/8aevphvgewt8/71XiEnNjt9Hh27C7XuggLp/3597f96968f08e656f369be2e154094c/event-139-image",
-      "type": "Virtual",
-      "region": "AMER",
-      "topic": null,
-      "availability": "Live"
-    },
-    {
-      "title": "Microsoft AI Tour: Cologne",
-      "description": "Explore the latest AI innovations, connect with experts, and learn through live sessions. Cologne, Germany October 22, 2026",
-      "url": "https://aitour.microsoft.com/flow/microsoft/cologne27/citylanding/page/cityhome",
-      "cta": "Explore more",
-      "date": "2026-10-22T00:00:00.000Z",
-      "image": "https://images.ctfassets.net/8aevphvgewt8/3j6fgHAQlI16mrEQyjSqIs/700e9e3859917fdd57e579a9d71ec985/event-186-image",
-      "type": "In Person",
-      "region": "EMEA",
-      "topic": "AI",
       "availability": "Live"
     },
     {
