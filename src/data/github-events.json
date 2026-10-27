@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-10-27T00:23:55.174Z",
+  "syncedAt": "2026-10-27T08:54:36.604Z",
   "events": [
     {
       "title": "Dev Days",
@@ -120,6 +120,18 @@
       "region": "AMER",
       "topic": "AI",
       "availability": "Live"
+    },
+    {
+      "title": "GitHub Social Club",
+      "description": "Join Microsoft Ignite attendees for hands-on building, bites, sips, and networking. San Francisco, CA November 17",
+      "url": "https://github.registration.goldcast.io/events/32ea66c4-4e64-417c-9c82-df5004b66537",
+      "cta": "Register",
+      "date": "2026-11-17T00:00:00.000Z",
+      "image": "https://images.ctfassets.net/8aevphvgewt8/sDTI0Rh3pWb4SC7zyesKh/a57cec9bd8847e069456d0807192d9e4/event-252-image",
+      "type": "In Person",
+      "region": "AMER",
+      "topic": null,
+      "availability": null
     },
     {
       "title": "GitHub Universe on the Road: Sydney",
