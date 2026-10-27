@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-10-26T20:28:58.405Z",
+  "capturedAt": "2026-10-27T00:25:38.734Z",
   "hero": {
     "title": "Topics",
     "blurb": "Browse popular topics on GitHub."
@@ -103,15 +103,15 @@
     }
   ],
   "popular": [
+    "react",
+    "nodejs",
     "javascript",
+    "css",
     "python",
-    "windows",
-    "docker",
-    "automation",
+    "html",
     "typescript",
-    "sandbox",
-    "small",
-    "astro",
-    "live-tennis-api"
+    "alura",
+    "the-odin-project",
+    "faculdade-impacta"
   ]
 }
