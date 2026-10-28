@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-10-28T05:36:04.893Z",
+  "capturedAt": "2026-10-28T12:47:22.009Z",
   "hero": {
     "title": "Topics",
     "blurb": "Browse popular topics on GitHub."
@@ -106,12 +106,12 @@
     "python",
     "cli",
     "ai",
-    "racing",
     "analysis",
+    "postgresql",
     "evaluation",
+    "data-engineering",
     "observability",
     "rag",
-    "status-delete",
     "llm"
   ]
 }
