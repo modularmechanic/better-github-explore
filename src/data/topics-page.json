@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-10-29T00:54:25.352Z",
+  "capturedAt": "2026-10-29T09:54:24.558Z",
   "hero": {
     "title": "Topics",
     "blurb": "Browse popular topics on GitHub."
@@ -105,13 +105,13 @@
   "popular": [
     "react",
     "javascript",
-    "css",
     "python",
-    "html",
-    "learning",
-    "automation",
     "typescript",
-    "ai",
-    "mafzalkalwardev"
+    "mcp",
+    "llm",
+    "claude-code",
+    "dsh-plugin",
+    "kanon-e2e-provisioned",
+    "kanon-e2e"
   ]
 }
