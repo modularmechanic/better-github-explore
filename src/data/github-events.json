@@ -1,53 +1,17 @@
 {
-  "syncedAt": "2026-11-03T06:42:20.747Z",
+  "syncedAt": "2026-11-03T16:59:50.114Z",
   "events": [
     {
       "title": "Dev Days",
-      "description": "A community-led event series for developers to explore the GitHub Copilot app and Copilot CLI hands-on. In-person globally September - October",
+      "description": "A community-led event series for developers to explore the GitHub Copilot app and Copilot CLI hands-on. In-person globally November",
       "url": "https://gh.io/join-dev-days",
       "cta": "Sign up",
       "date": "2026-09-01T00:00:00.000Z",
-      "image": "https://images.ctfassets.net/8aevphvgewt8/4BoryQVDSUgLBU0rZsLZnS/b79e542e391778f3e40aadf8fd8d9c43/event-107-image",
+      "image": "https://images.ctfassets.net/8aevphvgewt8/2G0kGQJdQuaGKPt66fLO1e/905f25f8790298a3fd9b6ac202d178ea/event-107-image",
       "type": "In Person",
       "region": null,
       "topic": "AI",
       "availability": null
-    },
-    {
-      "title": "GitHub Universe 2026 Ticket Giveaway",
-      "description": "Enter for a chance to win a free in-person ticket to GitHub Universe 2026. San Francisco, CA October 28-29",
-      "url": "https://gh.io/win",
-      "cta": "Enter now",
-      "date": "2026-10-06T00:00:00.000Z",
-      "image": "https://images.ctfassets.net/8aevphvgewt8/5EgOOnduM8CeMAfKr9wei9/1ec9645e7108f9279473171eac45534a/event-148-image",
-      "type": "Virtual",
-      "region": null,
-      "topic": null,
-      "availability": "Live"
-    },
-    {
-      "title": "GitHub Universe 2026",
-      "description": "GitHub Universe, our flagship developer event is back: uniting people, agents, and the world’s code. In-person in SF & online October 28-29",
-      "url": "https://githubuniverse.com/?utm_source=Site&utm_medium=GitHub&utm_campaign=event_uni_26",
-      "cta": "Register",
-      "date": "2026-10-28T00:00:00.000Z",
-      "image": "https://images.ctfassets.net/8aevphvgewt8/3hggASuPVD9sPa6BgzArHf/8c17c952cdcc2c0ae484f33aeca1867f/event-70-image",
-      "type": "Virtual",
-      "region": "AMER",
-      "topic": "AI",
-      "availability": "Live"
-    },
-    {
-      "title": "Microsoft AI Tour: Mexico City",
-      "description": "Explore the latest AI innovations, connect with experts, and learn through live sessions. Mexico City, Mexico October 29, 2026",
-      "url": "https://aitour.microsoft.com/flow/microsoft/mexicocity27/citylanding/page/cityhome",
-      "cta": "Explore more",
-      "date": "2026-10-29T00:00:00.000Z",
-      "image": "https://images.ctfassets.net/8aevphvgewt8/20ZO7XLfJKyZK5TdBtL3T2/b4b4500f3dcc7663250038f9c1b0d478/event-188-image",
-      "type": "In Person",
-      "region": "AMER",
-      "topic": "AI",
-      "availability": "Live"
     },
     {
       "title": "Game Off 2026",
