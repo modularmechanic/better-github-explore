@@ -1,18 +1,6 @@
 {
-  "syncedAt": "2026-11-03T16:59:50.114Z",
+  "syncedAt": "2026-11-03T23:16:41.848Z",
   "events": [
-    {
-      "title": "Dev Days",
-      "description": "A community-led event series for developers to explore the GitHub Copilot app and Copilot CLI hands-on. In-person globally November",
-      "url": "https://gh.io/join-dev-days",
-      "cta": "Sign up",
-      "date": "2026-09-01T00:00:00.000Z",
-      "image": "https://images.ctfassets.net/8aevphvgewt8/2G0kGQJdQuaGKPt66fLO1e/905f25f8790298a3fd9b6ac202d178ea/event-107-image",
-      "type": "In Person",
-      "region": null,
-      "topic": "AI",
-      "availability": null
-    },
     {
       "title": "Game Off 2026",
       "description": "Game Off is a month-long game jam in November where anyone builds and shares a game using any engine or language. Online November, 2026",
