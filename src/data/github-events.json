@@ -1,30 +1,6 @@
 {
-  "syncedAt": "2026-11-04T06:10:12.566Z",
+  "syncedAt": "2026-11-04T14:26:10.832Z",
   "events": [
-    {
-      "title": "Game Off 2026",
-      "description": "Game Off is a month-long game jam in November where anyone builds and shares a game using any engine or language. Online November, 2026",
-      "url": "https://itch.io/jam/game-off-2026",
-      "cta": "Join now",
-      "date": "2026-11-01T00:00:00.000Z",
-      "image": "https://images.ctfassets.net/8aevphvgewt8/4GM2K9POfIqNZzyrXvEijJ/ac11a05cfe650124169ea98d3b2af8f7/event-83-image",
-      "type": "Virtual",
-      "region": null,
-      "topic": null,
-      "availability": null
-    },
-    {
-      "title": "Microsoft AI Tour: Dubai",
-      "description": "Explore the latest AI innovations, connect with experts, and learn through live sessions. Dubai, United Arab Emirates November 3, 2026",
-      "url": "https://aitour.microsoft.com/flow/microsoft/dubai27/citylanding/page/cityhome",
-      "cta": "Explore more",
-      "date": "2026-11-03T00:00:00.000Z",
-      "image": "https://images.ctfassets.net/8aevphvgewt8/6JmQovlKp5OZN33KTUsbue/b3760235f51e0abeb034c1e443a73861/event-189-image",
-      "type": "In Person",
-      "region": "EMEA",
-      "topic": "AI",
-      "availability": "Live"
-    },
     {
       "title": "Reactor: How to Trust the Code You Ship",
       "description": "Learn how to find and fix issues, and trust your code. Online November 4, 2026 | 2:00 - 3:00 AM PT",
@@ -600,18 +576,6 @@
       "region": "APAC",
       "topic": "AI",
       "availability": "Live"
-    },
-    {
-      "title": "How to Trust the Code You Ship",
-      "description": "Learn how to find and fix issues, and trust your code. On Demand",
-      "url": "https://github.registration.goldcast.io/webinar/ee84b400-2894-4c13-b8a7-f37359108ea6?utm_source=GHEventsPage&utm_medium=Web&utm_campaign=Sec_Sept29",
-      "cta": "Watch now",
-      "date": "2027-09-22T00:00+00:00",
-      "image": "https://images.ctfassets.net/8aevphvgewt8/2AZIvU08r08mCG8SWM2d2s/67fa7fba92f7b4c78b59cf16282358eb/event-165-image",
-      "type": null,
-      "region": null,
-      "topic": null,
-      "availability": "On demand"
     },
     {
       "title": "GitHub Roadmap Webinar, Q2 2026",
