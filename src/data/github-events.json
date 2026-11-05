@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-11-04T21:16:35.215Z",
+  "syncedAt": "2026-11-05T10:46:36.669Z",
   "events": [
     {
       "title": "Game Off 2026",
@@ -11,30 +11,6 @@
       "type": "Virtual",
       "region": null,
       "topic": null,
-      "availability": null
-    },
-    {
-      "title": "Reactor: How to Trust the Code You Ship",
-      "description": "Learn how to find and fix issues, and trust your code. Online November 4, 2026 | 2:00 - 3:00 AM PT",
-      "url": "https://developer.microsoft.com/en-us/reactor/events/27685/",
-      "cta": "Register now",
-      "date": "2026-11-04T00:00:00.000Z",
-      "image": "https://images.ctfassets.net/8aevphvgewt8/2jLyVhy2LMPeSGnUYqf8MT/cf7382c82967b81f080ac160ce31dd7e/event-242-image",
-      "type": "Virtual",
-      "region": null,
-      "topic": "Security",
-      "availability": null
-    },
-    {
-      "title": "What Shipped at GitHub Universe: Put it to Work",
-      "description": "What's New and What's Next Online November 4, 2026 9am PST| 12pm EST",
-      "url": "https://github.registration.goldcast.io/webinar/de7c0ec8-6715-43f2-9489-486e95b5566a",
-      "cta": "Register now",
-      "date": "2026-11-04T00:00:00.000Z",
-      "image": "https://images.ctfassets.net/8aevphvgewt8/5BJkqT5I0zvstH8wrEJXFb/1e0890a6c50e305a1b2a44ff7444099b/event-219-image",
-      "type": "Virtual",
-      "region": "AMER",
-      "topic": "AI",
       "availability": null
     },
     {
