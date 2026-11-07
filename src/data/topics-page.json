@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-11-06T19:21:19.174Z",
+  "capturedAt": "2026-11-07T00:55:10.406Z",
   "hero": {
     "title": "Topics",
     "blurb": "Browse popular topics on GitHub."
@@ -103,15 +103,15 @@
     }
   ],
   "popular": [
-    "javascript",
     "python",
-    "java",
-    "html",
-    "ios",
-    "typescript",
-    "mcp",
-    "developer-tools",
-    "ai-agents",
-    "swiftui"
+    "cran",
+    "r",
+    "econometrics",
+    "r-package",
+    "islamic",
+    "fiqh",
+    "islamic-tech",
+    "elnemer70",
+    "islamic-1000"
   ]
 }
