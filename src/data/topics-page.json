@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-11-07T00:55:10.406Z",
+  "capturedAt": "2026-11-07T10:01:12.533Z",
   "hero": {
     "title": "Topics",
     "blurb": "Browse popular topics on GitHub."
@@ -103,15 +103,15 @@
     }
   ],
   "popular": [
+    "react",
     "python",
-    "cran",
-    "r",
-    "econometrics",
-    "r-package",
-    "islamic",
-    "fiqh",
-    "islamic-tech",
-    "elnemer70",
-    "islamic-1000"
+    "typescript",
+    "hackathon",
+    "nextjs",
+    "dsh",
+    "deepseek-harness",
+    "dsh-plugin",
+    "kanon-e2e-provisioned",
+    "kanon-e2e"
   ]
 }
