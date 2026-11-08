@@ -1,13 +1,13 @@
 {
-  "capturedAt": "2026-11-07T21:47:30.126Z",
+  "capturedAt": "2026-11-08T05:57:03.724Z",
   "hero": {
     "title": "Collections",
     "blurb": "Curated lists and insight into burgeoning industries, topics, and communities."
   },
   "order": [
+    "made-in-brazil",
+    "pixel-art-tools",
     "learn-to-code",
-    "game-engines",
-    "github-copilot-sdk-contest-winners",
     "choosing-projects",
     "clean-code-linters",
     "open-journalism",
