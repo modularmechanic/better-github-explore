@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-11-12T07:06:52.309Z",
+  "capturedAt": "2026-11-12T17:34:44.378Z",
   "hero": {
     "title": "Topics",
     "blurb": "Browse popular topics on GitHub."
@@ -103,15 +103,15 @@
     }
   ],
   "popular": [
-    "android",
+    "react",
+    "nodejs",
     "python",
+    "docker",
+    "flask",
+    "machine-learning",
     "typescript",
-    "mcp",
-    "ai-agents",
-    "local-first",
-    "llm",
-    "claude-code",
-    "deepseek-harness",
-    "dsh-plugin"
+    "pwa",
+    "prometheus",
+    "self-hosted"
   ]
 }
