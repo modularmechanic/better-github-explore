@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-11-13T17:09:53.588Z",
+  "syncedAt": "2026-11-13T23:29:48.963Z",
   "events": [
     {
       "title": "Game Off 2026",
@@ -74,6 +74,18 @@
       "availability": "Live"
     },
     {
+      "title": "AI Code Hygiene: Deslopification",
+      "description": "Catch it early, fix it automatically, and merge with confidence. Online November 18, 2026 | 9am PST| 12pm EST",
+      "url": "https://github.registration.goldcast.io/webinar/4e7ed375-4217-42ea-8421-439d25bdf161",
+      "cta": "Register now",
+      "date": "2026-11-18T00:00:00.000Z",
+      "image": "https://images.ctfassets.net/8aevphvgewt8/EzpGnQRx2zOEZXkzjjQhO/b036cb4324f4e993b59abde46d0758ab/event-220-image",
+      "type": "Virtual",
+      "region": "AMER",
+      "topic": "AI",
+      "availability": null
+    },
+    {
       "title": "Agentic Day: Montréal",
       "description": "Explore GitHub Universe updates with hands-on Copilot demos and agentic workflows. Montréal, QC November 19, 2026",
       "url": "https://github.registration.goldcast.io/events/679f4f7c-9ef5-4c3d-888b-3599a57d872b",
@@ -122,12 +134,12 @@
       "availability": "Live"
     },
     {
-      "title": "AI Code Hygiene: Deslopification",
-      "description": "Catch it early, fix it automatically, and merge with confidence. Online November 21, 2026 | 9am PST| 12pm EST",
-      "url": "https://github.registration.goldcast.io/webinar/4e7ed375-4217-42ea-8421-439d25bdf161",
+      "title": "Universe: Under the Hood",
+      "description": "Build, delegate, and ship with GitHub Copilot Online November 24, 2026 | 9am PST | 12pm EST",
+      "url": "https://github.registration.goldcast.io/webinar/e6708c6c-1fca-448f-a240-d266b488f409",
       "cta": "Register now",
-      "date": "2026-11-21T00:00:00.000Z",
-      "image": "https://images.ctfassets.net/8aevphvgewt8/2MEM7JdItIv39AGP42sbtq/202bd692209e8aabf2e36603895ed668/event-220-image",
+      "date": "2026-11-24T00:00:00.000Z",
+      "image": "https://images.ctfassets.net/8aevphvgewt8/hWofDxA0zjNZk3p5ISy3N/38fabfeeeb27e3f959c40f1ec042c8c5/event-264-image",
       "type": "Virtual",
       "region": "AMER",
       "topic": "AI",
@@ -170,6 +182,18 @@
       "availability": "Live"
     },
     {
+      "title": "Universe: Under the Hood",
+      "description": "Build, delegate, and ship with GitHub Copilot Online December 2, 2026 | 4pm UTC | 5pm CET",
+      "url": "https://github.registration.goldcast.io/events/95cffdad-240a-4ac0-8234-3ff8be703f87",
+      "cta": "Register now",
+      "date": "2026-12-02T00:00:00.000Z",
+      "image": "https://images.ctfassets.net/8aevphvgewt8/5WTHtDw1CuyC6STDeWVz9P/3425df3f1de10ee623e305b2510ab3dc/event-265-image",
+      "type": "Virtual",
+      "region": "EMEA",
+      "topic": "AI",
+      "availability": null
+    },
+    {
       "title": "GitHub Universe on the Road: Madrid",
       "description": "Experience the best of GitHub Universe with product insights, customer stories, and networking. Madrid, Spain December 3, 2026",
       "url": "https://github.registration.goldcast.io/events/5cbce871-d753-4e3f-a24a-ffd29eaf7040",
@@ -206,6 +230,18 @@
       "availability": "Live"
     },
     {
+      "title": "Universe: Under the Hood",
+      "description": "Build, delegate, and ship with GitHub Copilot Online December 9, 2026 | 3pm IST",
+      "url": "https://github.registration.goldcast.io/webinar/c6e95a38-19c6-4dfd-bf75-a9636a09761f",
+      "cta": "Register now",
+      "date": "2026-12-09T00:00:00.000Z",
+      "image": "https://images.ctfassets.net/8aevphvgewt8/1rM0ZGcBxUap4wGfUYJArk/b9fe4b6f3922ac65e494d081cd1c2e80/event-266-image",
+      "type": "Virtual",
+      "region": "APAC",
+      "topic": "AI",
+      "availability": null
+    },
+    {
       "title": "Microsoft AI Tour: Seattle",
       "description": "Explore the latest AI innovations, connect with experts, and learn through live sessions. Seattle, United States December 9, 2026",
       "url": "https://aitour.microsoft.com/flow/microsoft/seattle27/citylanding/page/cityhome",
@@ -240,6 +276,18 @@
       "region": "EMEA",
       "topic": "AI",
       "availability": "Live"
+    },
+    {
+      "title": "Universe: Under the Hood",
+      "description": "Build, delegate, and ship with GitHub Copilot Online December 15, 2026 | 9am PST | 12pm EST",
+      "url": "https://github.registration.goldcast.io/webinar/c79cde8d-04f5-4019-bda5-a618a7d281c4",
+      "cta": "Register now",
+      "date": "2026-12-15T00:00:00.000Z",
+      "image": "https://images.ctfassets.net/8aevphvgewt8/1fWV4ak1ePm6sW9hQ4g90X/f236c1226472924f0e2fc74e575d1163/event-267-image",
+      "type": "Virtual",
+      "region": "AMER",
+      "topic": "AI",
+      "availability": null
     },
     {
       "title": "Building for the Frontier Firm: What's Next for GitHub + AI",
