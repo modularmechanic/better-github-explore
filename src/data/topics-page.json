@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-11-14T06:15:24.026Z",
+  "capturedAt": "2026-11-14T13:30:21.409Z",
   "hero": {
     "title": "Topics",
     "blurb": "Browse popular topics on GitHub."
@@ -104,14 +104,14 @@
   ],
   "popular": [
     "react",
+    "android",
     "python",
-    "macos",
-    "documentation",
+    "windows",
+    "rust",
     "typescript",
-    "mcp",
+    "computer-vision",
+    "self-hosted",
     "ai-agents",
-    "llm",
-    "agent-skills",
-    "claude-skills"
+    "tauri"
   ]
 }
