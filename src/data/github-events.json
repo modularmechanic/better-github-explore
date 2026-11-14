@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-11-13T23:29:48.963Z",
+  "syncedAt": "2026-11-14T06:13:39.435Z",
   "events": [
     {
       "title": "Game Off 2026",
@@ -139,7 +139,7 @@
       "url": "https://github.registration.goldcast.io/webinar/e6708c6c-1fca-448f-a240-d266b488f409",
       "cta": "Register now",
       "date": "2026-11-24T00:00:00.000Z",
-      "image": "https://images.ctfassets.net/8aevphvgewt8/hWofDxA0zjNZk3p5ISy3N/38fabfeeeb27e3f959c40f1ec042c8c5/event-264-image",
+      "image": "https://images.ctfassets.net/8aevphvgewt8/6TVvLgdKOSJ7QouFbL0Js7/22730098349b50cb6b52fd0980c0874b/event-264-image",
       "type": "Virtual",
       "region": "AMER",
       "topic": "AI",
@@ -182,12 +182,12 @@
       "availability": "Live"
     },
     {
-      "title": "Universe: Under the Hood",
-      "description": "Build, delegate, and ship with GitHub Copilot Online December 2, 2026 | 4pm UTC | 5pm CET",
+      "title": "Universe: Under the Hood (EMEA)",
+      "description": "Build, delegate, and ship with GitHub Copilot Online December 2, 2026 | 4pm UTC",
       "url": "https://github.registration.goldcast.io/events/95cffdad-240a-4ac0-8234-3ff8be703f87",
       "cta": "Register now",
       "date": "2026-12-02T00:00:00.000Z",
-      "image": "https://images.ctfassets.net/8aevphvgewt8/5WTHtDw1CuyC6STDeWVz9P/3425df3f1de10ee623e305b2510ab3dc/event-265-image",
+      "image": "https://images.ctfassets.net/8aevphvgewt8/1QxAtYfYtsxVwHMd6X7XGL/a4dedbe45891c0f109cb2a92a3675833/event-265-image",
       "type": "Virtual",
       "region": "EMEA",
       "topic": "AI",
@@ -230,12 +230,12 @@
       "availability": "Live"
     },
     {
-      "title": "Universe: Under the Hood",
+      "title": "Universe: Under the Hood (APAC)",
       "description": "Build, delegate, and ship with GitHub Copilot Online December 9, 2026 | 3pm IST",
       "url": "https://github.registration.goldcast.io/webinar/c6e95a38-19c6-4dfd-bf75-a9636a09761f",
       "cta": "Register now",
       "date": "2026-12-09T00:00:00.000Z",
-      "image": "https://images.ctfassets.net/8aevphvgewt8/1rM0ZGcBxUap4wGfUYJArk/b9fe4b6f3922ac65e494d081cd1c2e80/event-266-image",
+      "image": "https://images.ctfassets.net/8aevphvgewt8/22gLkikaXN6N5IbANNe8XC/82076c9728e3df7aabb7ab7277daa362/event-266-image",
       "type": "Virtual",
       "region": "APAC",
       "topic": "AI",
@@ -283,7 +283,7 @@
       "url": "https://github.registration.goldcast.io/webinar/c79cde8d-04f5-4019-bda5-a618a7d281c4",
       "cta": "Register now",
       "date": "2026-12-15T00:00:00.000Z",
-      "image": "https://images.ctfassets.net/8aevphvgewt8/1fWV4ak1ePm6sW9hQ4g90X/f236c1226472924f0e2fc74e575d1163/event-267-image",
+      "image": "https://images.ctfassets.net/8aevphvgewt8/3qTx1hi6UCJUg3UpFmRkNX/65924937e203ba929e10a18ffb70ee1b/event-267-image",
       "type": "Virtual",
       "region": "AMER",
       "topic": "AI",
