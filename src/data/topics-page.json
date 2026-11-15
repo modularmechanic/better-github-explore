@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-11-15T01:01:45.634Z",
+  "capturedAt": "2026-11-15T10:47:16.758Z",
   "hero": {
     "title": "Topics",
     "blurb": "Browse popular topics on GitHub."
@@ -103,15 +103,15 @@
     }
   ],
   "popular": [
-    "open-source",
-    "bioinformatics",
-    "genomics",
-    "cpp",
-    "crispr",
-    "audio-plugin",
-    "juce",
-    "music-production",
-    "elnemer70",
-    "bio-med-1000"
+    "react",
+    "python",
+    "windows",
+    "typescript",
+    "nextjs",
+    "bounties",
+    "ai-agents",
+    "fastapi",
+    "llm",
+    "makefun"
   ]
 }
