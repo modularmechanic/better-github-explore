@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-11-17T18:31:06.168Z",
+  "syncedAt": "2026-11-18T02:52:43.962Z",
   "events": [
     {
       "title": "Game Off 2026",
@@ -170,6 +170,18 @@
       "availability": "Live"
     },
     {
+      "title": "Social Club",
+      "description": "Meet GitHub experts, demo Copilot, and recharge. Las Vegas December 2-3",
+      "url": "https://luma.com/GitHubSocialClubVegas",
+      "cta": "Register",
+      "date": "2026-12-02T00:00:00.000Z",
+      "image": "https://images.ctfassets.net/8aevphvgewt8/7tWoFnHCzmumHaQC1jakIy/ddfcbb062c139dc668732591dd8822ad/event-268-image",
+      "type": "In Person",
+      "region": "AMER",
+      "topic": "AI",
+      "availability": null
+    },
+    {
       "title": "Universe: Under the Hood (EMEA)",
       "description": "Build, delegate, and ship with GitHub Copilot Online December 2, 2026 | 4pm UTC",
       "url": "https://github.registration.goldcast.io/events/95cffdad-240a-4ac0-8234-3ff8be703f87",
@@ -180,6 +192,18 @@
       "region": "EMEA",
       "topic": "AI",
       "availability": null
+    },
+    {
+      "title": "Building the agentic SDLC",
+      "description": "Pair. Teach. Delegate Online December 2, 2026 | 9am PST | 12pm EST",
+      "url": "https://github.registration.goldcast.io/webinar/4f8d4244-1a82-40fc-a2ec-880f793ec941",
+      "cta": "Register now",
+      "date": "2026-12-02T00:00:00.000Z",
+      "image": "https://images.ctfassets.net/8aevphvgewt8/20fr1X7Oho7mdPXSQuMK1x/931095c86f86ac6973e4005adee0f162/event-269-image",
+      "type": "Virtual",
+      "region": "AMER",
+      "topic": "AI",
+      "availability": "Live"
     },
     {
       "title": "GitHub Universe on the Road: Madrid",
@@ -278,6 +302,18 @@
       "availability": null
     },
     {
+      "title": "Building the agentic SDLC",
+      "description": "Pair. Teach. Delegate Online December 16, 2026 | 9am PST | 12pm EST",
+      "url": "https://github.registration.goldcast.io/webinar/95e59dea-505d-4d12-901d-5ede93d2df9d",
+      "cta": "Register now",
+      "date": "2026-12-16T00:00:00.000Z",
+      "image": "https://images.ctfassets.net/8aevphvgewt8/31mSFLJw4SpwBp92suAwaF/5a1bf2e1bc20a0e83fd2dbc5b0ce7bea/event-270-image",
+      "type": "Virtual",
+      "region": "AMER",
+      "topic": "AI",
+      "availability": "Live"
+    },
+    {
       "title": "Building for the Frontier Firm: What's Next for GitHub + AI",
       "description": "Join us to explore the future of agentic development and how GitHub powers trusted, autonomous workflows. Online December 17, 11am-12pm PDT",
       "url": "https://github.registration.goldcast.io/events/dfdf494e-ecfb-4a87-b8f4-554b3cd8bf3f",
@@ -287,6 +323,18 @@
       "type": "Virtual",
       "region": "AMER",
       "topic": null,
+      "availability": "Live"
+    },
+    {
+      "title": "Building the agentic SDLC",
+      "description": "Pair. Teach. Delegate Online January 6, 2027 | 9am PST | 12pm EST",
+      "url": "https://github.registration.goldcast.io/webinar/999cafa0-095e-444e-8521-de22c760b476",
+      "cta": "Register now",
+      "date": "2027-01-06T00:00:00.000Z",
+      "image": "https://images.ctfassets.net/8aevphvgewt8/13vbtdSp4H3RLcz6d0FPuR/0b60d2a5788d6e4e7e7e5836c0c21927/event-271-image",
+      "type": "Virtual",
+      "region": "AMER",
+      "topic": "AI",
       "availability": "Live"
     },
     {
