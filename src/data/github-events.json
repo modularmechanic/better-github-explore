@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-11-19T02:31:23.315Z",
+  "syncedAt": "2026-11-19T11:31:16.504Z",
   "events": [
     {
       "title": "Game Off 2026",
@@ -11,30 +11,6 @@
       "type": "Virtual",
       "region": null,
       "topic": null,
-      "availability": null
-    },
-    {
-      "title": "GitHub Universe on the Road: Toronto",
-      "description": "Experience the best of GitHub Universe with product insights, customer stories, and networking. Toronto, Canada November 18, 2026",
-      "url": "https://github.registration.goldcast.io/events/9a12405d-e612-46e3-aad9-a96329cee2da",
-      "cta": "Register",
-      "date": "2026-11-18T00:00:00.000Z",
-      "image": "https://images.ctfassets.net/8aevphvgewt8/2sRcUSoXJxVkd2JHcqjya9/3e8d3858fc476cf392309ccda3940ea9/event-176-image",
-      "type": "In Person",
-      "region": "AMER",
-      "topic": "AI",
-      "availability": "Live"
-    },
-    {
-      "title": "AI Code Hygiene: Deslopification",
-      "description": "Catch it early, fix it automatically, and merge with confidence. Online November 18, 2026 | 9am PST| 12pm EST",
-      "url": "https://github.registration.goldcast.io/webinar/4e7ed375-4217-42ea-8421-439d25bdf161",
-      "cta": "Register now",
-      "date": "2026-11-18T00:00:00.000Z",
-      "image": "https://images.ctfassets.net/8aevphvgewt8/EzpGnQRx2zOEZXkzjjQhO/b036cb4324f4e993b59abde46d0758ab/event-220-image",
-      "type": "Virtual",
-      "region": "AMER",
-      "topic": "AI",
       "availability": null
     },
     {
