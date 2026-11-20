@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-11-19T20:29:41.528Z",
+  "syncedAt": "2026-11-20T11:28:16.378Z",
   "events": [
     {
       "title": "Game Off 2026",
@@ -12,54 +12,6 @@
       "region": null,
       "topic": null,
       "availability": null
-    },
-    {
-      "title": "Agentic Day: Montréal",
-      "description": "Explore GitHub Universe updates with hands-on Copilot demos and agentic workflows. Montréal, QC November 19, 2026",
-      "url": "https://github.registration.goldcast.io/events/679f4f7c-9ef5-4c3d-888b-3599a57d872b",
-      "cta": "Register now",
-      "date": "2026-11-19T00:00:00.000Z",
-      "image": "https://images.ctfassets.net/8aevphvgewt8/6xzO38bNPjlLu05LemdWri/aa4e0df34b1beb68519abf729e15e959/event-246-image",
-      "type": "In Person",
-      "region": "AMER",
-      "topic": "AI",
-      "availability": "Live"
-    },
-    {
-      "title": "Agentic Day: Boston",
-      "description": "Explore GitHub Universe updates with hands-on Copilot demos and agentic workflows. Burlington, MA November 19, 2026",
-      "url": "https://github.registration.goldcast.io/events/3eff30af-1473-4e43-abc3-eba041a2b1da",
-      "cta": "Register now",
-      "date": "2026-11-19T00:00:00.000Z",
-      "image": "https://images.ctfassets.net/8aevphvgewt8/6uuwL8YOGhrcpDyAkNvqg9/f16cbbb4e571d307a5e27ac9f2b1f10a/event-245-image",
-      "type": "In Person",
-      "region": "AMER",
-      "topic": "AI",
-      "availability": "Live"
-    },
-    {
-      "title": "GitHub Connect Tour",
-      "description": "Ready to build with us? Explore the GitHub Connect Tour agenda and join us in a city near you. In-person globally November - December",
-      "url": "https://github.com//resources/events/github-connect-tour",
-      "cta": "Register",
-      "date": "2026-11-19T00:00:00.000Z",
-      "image": "https://images.ctfassets.net/8aevphvgewt8/37dC8eyoxRCgKeQD1MPiij/ee0d2277f55440505a5c157b24b68d58/event-241-image",
-      "type": "In Person",
-      "region": null,
-      "topic": null,
-      "availability": null
-    },
-    {
-      "title": "Measuring What Matters: Proving the ROI of AI-Powered Engineering",
-      "description": "Measure the impact of GitHub Copilot and agentic workflows with real outcomes, not anecdotes. Online November 19, 11am-12pm PDT",
-      "url": "https://github.registration.goldcast.io/events/4b51851e-0da6-498b-99b7-d35b8a9f6d7e",
-      "cta": "Register here",
-      "date": "2026-11-19T00:00:00.000Z",
-      "image": "https://images.ctfassets.net/8aevphvgewt8/6J3AKdxo1d5hDNh4cndoQ5/978a8d0d09406de776ec0006b9b436ea/event-140-image",
-      "type": "Virtual",
-      "region": "AMER",
-      "topic": null,
-      "availability": "Live"
     },
     {
       "title": "Universe: Under the Hood",
